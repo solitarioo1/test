@@ -80,12 +80,7 @@ try {
     
 } catch (Exception $e) {
     error_log("❌ Error inicializando la aplicación: " . $e->getMessage());
-    
-    if ($_ENV['APP_ENV'] === 'development') {
-        die("Error inicializando la aplicación: " . $e->getMessage());
-    } else {
-        die("Error del sistema. Contacte al administrador.");
-    }
+    // No hacer die() — permitir que páginas estáticas carguen sin BD
 }
 
 /**
