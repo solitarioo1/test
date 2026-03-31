@@ -50,7 +50,7 @@ ENV APP_ENV=${APP_ENV} \
 RUN apt-get update && apt-get install -y \
     libpng-dev \
     libjpeg-dev \
-    libfreetype6-dev \
+    libfreetype-dev \
     libzip-dev \
     zip \
     unzip \
