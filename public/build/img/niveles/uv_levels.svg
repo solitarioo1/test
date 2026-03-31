@@ -1,0 +1,32 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="600" height="66.6" fill="#FFFF00"/>
+  <rect x="0" y="66.6" width="600" height="66.6" fill="#FFDA00"/>
+  <rect x="0" y="133.2" width="600" height="66.6" fill="#FFA500"/>
+  <rect x="0" y="199.8" width="600" height="66.6" fill="#FF7000"/>
+  <rect x="0" y="266.4" width="600" height="66.6" fill="#FF3A00"/>
+  <rect x="0" y="333" width="600" height="67" fill="#FF0000"/>
+
+  <text x="20" y="40" font-size="20">1-2</text>
+  <text x="20" y="106.6" font-size="20">3-5</text>
+  <text x="20" y="173.2" font-size="20">6-8</text>
+  <text x="20" y="239.8" font-size="20">9-11</text>
+  <text x="20" y="306.4" font-size="20">12-14</text>
+  <text x="20" y="373" font-size="20">14 +</text>
+
+  <text x="100" y="40" font-size="20">🕶️</text>
+  <text x="100" y="106.6" font-size="20">🕶️ 👕</text>
+  <text x="100" y="173.2" font-size="20">🕶️ 👒 👕 🧴</text>
+  <text x="100" y="239.8" font-size="20">🕶️ 👒 👕 ☂️ 🧴</text>
+  <text x="100" y="306.4" font-size="20">🕶️ 👒 👕 ☂️ 🧴</text>
+  <text x="100" y="373" font-size="20">🕶️ 👒 👕 ☂️ 🧴</text>
+
+  <text x="400" y="40" font-size="20">Mínimo</text>
+  <text x="400" y="106.6" font-size="20">Bajo</text>
+  <text x="400" y="173.2" font-size="20">Moderado</text>
+  <text x="400" y="239.8" font-size="20">Alto</text>
+  <text x="400" y="306.4" font-size="20">Muy Alto</text>
+  <text x="400" y="373" font-size="20">Extremo</text>
+
+  <text x="20" y="15" font-size="20">Valor del Índice</text>
+    <text x="400" y="15" font-size="20">Nivel de Riesgo</text>
+</svg>

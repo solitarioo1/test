@@ -30,12 +30,7 @@ yarn.lock
 # ========================================
 # 🏗️ ARCHIVOS COMPILADOS Y BUILD
 # ========================================
-public/build/css/
-public/build/js/
-public/build/img/
 dist/
-*.min.css
-*.min.js
 .sass-cache/
 
 # ========================================

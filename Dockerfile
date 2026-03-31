@@ -1,25 +1,6 @@
 # ========================================
-# Stage 1: Build assets (Node.js)
-# ========================================
-FROM node:20 AS builder
-
-WORKDIR /app
-
-COPY package.json ./
-# --ignore-scripts evita compilar Sharp (módulo nativo) que no necesitamos
-RUN npm install --ignore-scripts
-
-COPY gulpfile.js ./
-COPY src/ ./src/
-
-# Compilar solo CSS y JS (no images — ya son .webp, se copian directo)
-RUN npx gulp css && npx gulp javascript
-
-# Copiar imágenes .webp directamente sin procesar
-RUN mkdir -p ./public/build/img && cp -r src/img/* ./public/build/img/
-
-# ========================================
-# Stage 2: PHP + Apache (production)
+# PHP + Apache (production)
+# Assets ya compilados en el repo
 # ========================================
 FROM php:8.2-apache
 
@@ -91,9 +72,6 @@ WORKDIR /var/www/html
 
 # Copy project files
 COPY . .
-
-# Copy compiled assets from builder stage
-COPY --from=builder /app/public/build ./public/build
 
 # Install PHP dependencies (no dev, optimized)
 RUN composer install --no-dev --optimize-autoloader --no-interaction
