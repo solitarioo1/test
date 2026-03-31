@@ -1,0 +1,138 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.sobre-radiacion {
+  padding-top: v.$separacion-corta;
+  background-color: v.$fondo_2;
+  position: relative;
+
+  @include m.tablet{
+  padding: v.$separacion-corta ;
+  }
+
+  @include m.desktop{
+  padding: auto v.$separacion ;
+  h2{
+    margin-bottom:3rem;
+  }
+  }
+
+  .radiacion-contenido {
+    @include m.flex(column, center, flex-start, 2rem);
+    position: relative;
+    // z-index: 2;
+
+    @include m.tablet {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .resumen-rad {
+    flex: 1;
+    background-color: v.$neutro-300;
+    border-radius: v.$radius-md;
+    padding: 2rem 1rem;
+    box-shadow: v.$shadow-sm;
+    color: v.$color_terciario_1;
+    line-height: 1.6;
+
+    @include m.tablet{
+    padding: 3rem 1rem;
+    }
+    @include m.desktop{
+    padding: 3rem 2rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 2.5rem;
+      text-align: justify;
+
+      &::before {
+        font-size: 3rem;
+        color: v.$color_quinto_1;
+        vertical-align: top;
+        margin-right: 0.5rem;
+      }
+    }
+
+    .radiacion-header-cta {
+      .btn-conocenos {
+        display: inline-block;
+        background-color: v.$color_quinto_1;
+        color: v.$blanco;
+        font-size: 1.4rem;
+        font-weight: 500;
+        padding: 1rem 2rem;
+        border-radius: v.$radius-sm;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: v.$shadow-sm;
+        margin-left:25%;
+        margin-right:25%;
+
+        @include m.tablet{
+          font-size: 1.5rem;
+          font-weight: 500;
+          padding: 1.2rem 1rem;
+          margin-left:18%;
+          margin-right:10%; 
+        }
+
+        @include m.desktop{
+          padding: 1.2rem 2.4rem;
+          margin-left:20%;
+          margin-right:20%; 
+        }
+
+        &:hover {
+          background-color: v.$color_quinto_2;
+          transform: translateY(-0.3rem);
+          box-shadow: v.$shadow-md;
+        }
+      }
+    }
+  }
+
+  .radiacion-imagen {
+    flex: 1;
+    margin: 3rem;
+    margin-top: 1rem;
+
+
+    overflow: hidden;
+    border-radius: 1.5rem;
+    box-shadow: v.$shadow-sm;
+    transform: rotate(1deg);
+    transition: all 0.5s ease;
+    clip-path: polygon(
+      20% 0%, 80% 0%,
+      100% 20%, 100% 80%,
+      80% 100%, 20% 100%,
+      0% 80%, 0% 20%
+    );
+  
+    @include m.tablet {
+      margin: 0;
+      // margin-left:0.5rem;
+    }
+  
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+  
+    &:hover {
+      transform: rotate(0deg) scale(1.03);
+  
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+  
+}
+ 

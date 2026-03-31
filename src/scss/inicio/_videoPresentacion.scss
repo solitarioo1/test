@@ -1,0 +1,131 @@
+@use '../base/variables' as v;
+@use '../base/mixins'    as m;
+
+.video-presentacion {
+  width: auto;
+  padding: v.$separacion-corta env(safe-area-inset-top) 0rem env(safe-area-inset-bottom);
+  background-color: v.$neutro-300;
+  text-align: center;
+  overflow: hidden;
+  margin:auto 0rem;
+
+  @include m.tablet{
+    padding: v.$separacion-corta env(safe-area-inset-top) 1.6rem env(safe-area-inset-bottom);
+    margin:-5rem auto 0rem auto;
+    position:relative
+  }
+
+  @include m.desktop{
+    padding-bottom: v.$separacion ;
+    margin-top: - calc(v.$separacion-larga);
+  }
+
+  // Texto descriptivo con escala fluida
+  p {
+    margin: 0 0.8rem calc(v.$separacion-corta/2) 0.8rem;
+    font-size: 1.3rem;
+    text-align: justify;
+    color: v.$neutro-600;
+    justify-content: center;
+
+    @include m.tablet{
+      font-size: 1.5rem;
+      padding: auto auto;
+
+    }
+    @include m.desktop{
+      font-size: 1.8rem;
+      margin: 0 3rem calc(v.$separacion-corta) 3rem;
+
+    }
+  }
+
+  // Contenedor de vídeo con microinteracciones
+  .contenido-video {
+    @include m.flex(column, center, center);
+    gap: v.$separacion-corta;
+
+    .video-contenedor {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      box-shadow: v.$shadow-md;
+      transition: transform v.$transicion, box-shadow v.$transicion;
+
+      @include m.tablet{
+        border-radius: v.$radius-md;
+      }
+      @include m.desktop{
+        border-radius: v.$radius-md;
+
+      }
+
+      &:hover {
+        transform: scale(1.02);
+        box-shadow: v.$shadow-md;
+      }
+
+      // Overlay de botón de reproducción
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 4rem;
+        height: 4rem;
+        background: url('/assets/icons/play-button.svg') no-repeat center center;
+        background-size: contain;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
+
+      .video-frame {
+        width: 100%;
+        aspect-ratio: 16/9;
+        border: none;
+      }
+    }
+  }
+
+  // Preferencias de reducción de movimiento
+  @media (prefers-reduced-motion: reduce) {
+    .video-contenedor,
+    .video-contenedor * {
+      transition: none ;
+      animation: none ;
+    }
+  }
+
+  // Estilos para tablet
+  @include m.tablet {
+    padding: v.$separacion 1rem;
+
+    h2 {
+      font-size: clamp(3rem, 4vw, 3.5rem);
+
+      &::after {
+        width: clamp(8rem, 12vw, 10rem);
+        height: 0.5rem;
+      }
+    }
+
+    .contenido-video .video-contenedor {
+      max-width: 80rem;
+    }
+  }
+
+  // Estilos para desktop
+  @include m.desktop {
+    // padding: v.$separacion-larga 0;
+
+    .contenido-video .video-contenedor {
+      max-width: 100rem;
+    }
+  }
+}

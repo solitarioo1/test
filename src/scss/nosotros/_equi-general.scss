@@ -1,0 +1,203 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.nuestro-equipo-general {
+    padding: 3rem 0.5rem;
+    background-color: v.$fondo_2;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+            
+    @include m.tablet {
+        padding: v.$separacion auto;
+        padding-top:8rem;
+    }
+    @include m.desktop {
+        padding: v.$separacion auto;
+        padding-top:10rem;
+
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.04;
+        z-index: 1;
+    }
+    
+    
+    .equipo-header-contenido {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        align-items: center;
+
+        
+        @include m.tablet {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+    
+    .equipo-header-texto {
+        flex: 1;
+        
+        @include m.tablet {
+            // padding-right: 4rem;
+        }
+        
+        h2 {
+            font-size: 1.7rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            font-weight: 700;
+            position: relative;
+            text-align: left;
+            @include m.tablet {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+            @include m.desktop {
+                font-size: 2.5rem;
+                margin-bottom: 2.5rem;
+            }
+            &::after {
+                content: '';
+                display: block;
+                width: 15rem;
+                height: 0.2rem;
+                background: linear-gradient(to right, v.$color_quinto_1, v.$color_quinto_2);
+                margin-top: 1.5rem;
+                border-radius: 0.2rem;
+                @include m.tablet {
+                    width: 20rem;
+                    height: 0.5rem;
+                }
+            }
+        }
+        
+        p {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            color: v.$color_terciario_1;
+            margin-bottom: 1rem;
+            text-align: left;
+            text-align: justify;
+            @include m.tablet {
+                font-size: 1.6rem;
+                margin-bottom: 3rem;
+            }
+            @include m.tablet {
+                font-size: 1.7rem;
+                margin-bottom: 3rem;
+            }
+        }
+        
+        .equipo-header-cta {
+            padding-top:1rem;
+            .btn-conocenos {
+                display: inline-block;
+                background-color: v.$color_quinto_1;
+                color: v.$blanco;
+                font-size: 1.4rem;
+                font-weight: 500;
+                padding: 0.8rem 1.5rem;
+                margin-left:27%;
+                border-radius: 0.5rem;
+                text-decoration: none;
+                text-align: center;
+                transition: all 0.3s ease;
+                box-shadow: 0 0.4rem 1rem v.$neutro-500;
+                position:relative;
+                z-index:5;
+
+                @include m.tablet {
+                    font-size: 1.6rem;
+                    padding: 1.2rem 2.4rem;
+                    margin-left:auto;
+
+
+                }
+                &:hover {
+                    background-color: v.$color_quinto_2;
+                    transform: translateY(-0.3rem);
+                    box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.15);
+                }
+            }
+        }
+    }
+    
+    .equipo-header-imagen {
+        flex: 1;
+        position: relative;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15);
+        transform: rotate(1deg);
+        transition: all 0.5s ease;
+        clip-path: polygon(
+            20% 0%, 80% 0%,
+            100% 20%, 100% 80%,
+            80% 100%, 20% 100%,
+            0% 80%, 0% 20%
+          );
+          
+
+        
+        &:hover {
+            transform: rotate(0deg) scale(1.02);
+            
+            .equipo-imagen-overlay {
+                opacity: 0.9;
+            }
+            
+            img {
+                transform: scale(1.05);
+       
+            }
+        }
+        
+        img {
+            width: 45rem;
+            height: 25rem;
+            @include m.tablet{
+                width: 100%;
+                height: 100%;
+                transition: transform 0.5s ease;
+                display: block;
+                object-fit: cover;
+
+              }
+
+
+        }
+        
+        .equipo-imagen-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(v.$color_primario_1, 0.8), transparent);
+            padding: 3rem 2rem 1.5rem;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+            
+            span {
+                color: v.$blanco;
+                font-size: 1.5rem;
+                font-weight: 700;
+                letter-spacing: 1px;
+                display: block;
+                text-align: center;
+                text-transform: uppercase;
+                @include m.tablet{
+                  font-size: 2rem;
+                }
+            }
+        }
+    }
+    
+}

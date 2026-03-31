@@ -1,0 +1,88 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.toma-accion {
+  background-color: v.$azul-200;
+  padding: v.$separacion 1.6rem;
+
+  @include m.grid(1, v.$separacion); 
+
+ 
+  @include m.desktop {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: v.$separacion;
+  }
+
+  .contenedor-accion {
+    .texto-accion {
+      h2 {
+        font-size: clamp(2.4rem, 5vw, 3.6rem);
+        font-weight: 700;
+        color: v.$azul-700;
+        span {
+          color: v.$turquesa-500;
+        }
+      }
+
+      p {
+        font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+        color: v.$neutro-700;
+        margin: 1rem 0 v.$separacion-corta;
+      }
+
+      .beneficios-accion {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+          font-size: 1.6rem;
+          color: v.$neutro-800;
+          margin-bottom: 1rem;
+
+          i {
+            color: v.$verde-400;
+            margin-right: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  .estadisticas-accion {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+
+    @include m.tablet {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    .estadistica {
+      text-align: center;
+
+      .numero {
+        font-size: clamp(3rem, 6vw, 5rem);
+        font-weight: 700;
+        color: v.$turquesa-500;
+        display: inline-block;
+        transition: transform 0.3s ease;
+        cursor: default;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      .texto {
+        font-size: 1.4rem;
+        color: v.$neutro-700;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}

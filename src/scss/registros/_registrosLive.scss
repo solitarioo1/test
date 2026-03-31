@@ -1,0 +1,517 @@
+@use "sass:color";
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.principal-registros {
+    font-family: v.$fuente_principal;
+    color: v.$color_terciario_1;
+    margin: 0rem auto 0;
+    padding: 2rem;
+    background-color: v.$azulClaro2;
+    width: 100%;
+
+    @include m.tablet {
+        padding: 3rem;
+    }
+
+    @include m.desktop {
+        padding: 5rem;
+    }
+}
+
+.titulo-registros {
+    text-align: center;
+    margin-bottom: v.$separacion-corta;
+
+    h1 {
+        color: v.$color_primario_1;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        font-size: 1.5rem;
+
+        @include m.tablet {
+            font-size: 2rem;
+        }
+        @include m.desktop {
+            font-size: 2.5rem;
+        }
+    }
+
+    .estado-registro {
+        color: v.$color_secundario_1;
+        font-weight: bold;
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+            content: '●';
+            margin-right: 8px;
+            color: v.$color_secundario_1;
+            animation: parpadeo 1.5s infinite;
+        }
+    }
+}
+
+@keyframes parpadeo {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.contenedor-grafica-registros {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 2rem;
+
+    > div:first-child {
+        grid-column: 1 / -1; // Ocupa toda la fila
+        display: grid;
+        grid-template-columns: 30% 1fr;
+        gap: 0.5rem;
+    }
+
+    > div:last-child {
+        grid-column: 1 / -1; // Ocupa toda la fila  
+    }
+
+
+    @include m.tablet {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        
+        > div:first-child {
+            grid-column: 1 / -1; // Ocupa toda la fila
+            display: grid;
+            grid-template-columns: 30% 1fr;
+            gap: 2rem;
+        }
+
+        > div:last-child {
+            grid-column: 1 / -1; // Ocupa toda la fila  
+        }
+    }
+
+    @include m.desktop {
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 1fr;
+        gap: 3rem;
+        
+        > div:first-child {
+            grid-column: 1;
+            grid-row: 1;
+            display: grid;
+            grid-template-columns: 30% 1fr;
+            gap: 2rem;
+        }
+
+        > div:last-child {
+            grid-column: 2;
+            grid-row: 1;
+        }
+    }
+}
+
+.columna-izquierda {
+    background-color: v.$blanco;
+    padding: 0.3rem;
+    border-radius: v.$radius-md;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 0; // Importante para permitir el scroll
+    max-height: 40rem; // Altura máxima para evitar desbordamiento
+
+    @include m.tablet {
+        flex: 0 0 30%;
+        margin-bottom: 0;
+        padding: 2rem;
+        max-height: 60rem; // Altura máxima para evitar desbordamiento
+    }
+
+    h2 {
+        margin-bottom: 1.5rem;
+        flex-shrink: 0; // No se comprima el título
+    }
+
+    // Contenedor del buscador
+    .buscador-estaciones {
+        margin-bottom: 1.5rem;
+        flex-shrink: 0; // No se comprima el buscador
+        
+        .input-buscador {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            border: 2px solid color.adjust(v.$color_quinto_3, $lightness: 20%);
+            border-radius: v.$radius-sm;
+            font-family: v.$fuente_secundario;
+            font-size: 1rem;
+            color: v.$color_terciario_1;
+            background-color: v.$blanco;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+            @include m.tablet{
+                font-size: 1.4rem;
+            }
+
+            &::placeholder {
+                color: v.$plomo;
+                opacity: 0.7;
+            }
+
+            &:focus {
+                outline: none;
+                border-color: v.$color_secundario_1;
+                box-shadow: 0 0 0 3px rgba(v.$color_secundario_1, 0.1);
+                transform: translateY(-1px);
+            }
+
+            &:hover {
+                border-color: color.adjust(v.$color_quinto_3, $lightness: 10%);
+            }
+        }
+
+        // Contador de resultados
+        .contador-resultados {
+            margin-top: 0.8rem;
+            font-family: v.$fuente_secundario;
+            font-size: 1.2rem;
+            color: v.$plomo;
+            text-align: center;
+            opacity: 0.8;
+        }
+    }
+
+    // Contenedor de la lista con scroll
+    .contenedor-lista-estaciones {
+        flex: 1; // Toma todo el espacio disponible
+        overflow-y: auto; // Scroll vertical
+        overflow-x: hidden; // Sin scroll horizontal
+        min-height: 0; // Para permitir el shrink
+        
+        // Personalización del scrollbar
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: color.adjust(v.$blanco, $lightness: -5%);
+            border-radius: v.$radius-sm;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: color.adjust(v.$color_quinto_3, $lightness: 20%);
+            border-radius: v.$radius-sm;
+            transition: background 0.3s ease;
+
+            &:hover {
+                background: v.$color_quinto_3;
+            }
+        }
+
+        // Para Firefox
+        scrollbar-width: thin;
+        scrollbar-color: color.adjust(v.$color_quinto_3, $lightness: 20%) color.adjust(v.$blanco, $lightness: -5%);
+    }
+
+    #lista-estaciones {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        padding-right: 0.5rem; // Espacio para no chocar con scrollbar
+
+        li {
+            padding:0rem 1rem;
+            margin-bottom: 0.8rem;
+            background-color: v.$color_quinto_3;
+            border-radius: v.$radius-sm;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: v.$fuente_secundario;
+            color: v.$blanco;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+
+            @include m.tablet{
+                padding: 1.2rem; 
+            }
+
+            &:hover {
+                background-color: color.adjust(v.$color_quinto_3, $lightness: -10%);
+                transform: translateY(-2px) translateX(2px);
+                box-shadow: v.$shadow-sm;
+            }
+
+            &:active {
+                transform: translateY(0) translateX(0);
+            }
+
+            // Estado seleccionado
+            &.seleccionada {
+                background-color: v.$color_secundario_1;
+                color: v.$blanco;
+                box-shadow: v.$shadow-md;
+                
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    width: 4px;
+                    background-color: v.$color_primario_1;
+                }
+
+                &:hover {
+                    background-color: color.adjust(v.$color_secundario_1, $lightness: -8%);
+                }
+            }
+
+            // Efecto de carga/shimmer para cuando se están cargando
+            &.cargando {
+                background: linear-gradient(
+                    90deg,
+                    v.$color_quinto_3 25%,
+                    color.adjust(v.$color_quinto_3, $lightness: 15%) 50%,
+                    v.$color_quinto_3 75%
+                );
+                background-size: 200% 100%;
+                animation: shimmer 1.5s infinite;
+                color: transparent;
+            }
+        }
+
+        .station-btn {
+        border: none; 
+        background-color: transparent; 
+        font-family: v.$fuente_secundario;
+        font-size: 1rem; 
+        color: v.$neutro-700; 
+        cursor: pointer; 
+        padding: 0.5rem 2rem;
+
+        @include m.tablet{ 
+            font-size: 1.3rem;
+            padding: 1rem 2rem; 
+        }
+        @include m.desktop{ font-size: 1.6rem; }
+
+        }
+
+        .station-btn:focus {
+        outline: none; 
+        }
+
+        .sin-resultados {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: v.$plomo;
+            font-family: v.$fuente_secundario;
+            font-style: italic;
+            
+            &::before {
+                content: '🔍';
+                display: block;
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+// Animación shimmer para elementos cargando
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.columna-centro {
+    flex: 1;
+    background-color: v.$blanco;
+    padding: 1rem;
+    border-radius: v.$radius-md;
+
+
+    @include m.tablet {
+        flex: 0 0 calc(70% - 2rem);
+        padding: 2rem;
+
+    }
+
+    .contenedor-mapa {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+
+        h2 {
+            margin-bottom: 2rem;
+        }
+
+        .mapa-estaciones {
+            height: 30rem;
+            background-color: v.$color_quinto_3;
+            border-radius: v.$radius-md;
+            overflow: hidden;
+            position: relative;
+            box-shadow: v.$shadow-md;
+            padding-bottom:3rem;
+
+            @include m.tablet {
+                height: 35rem;
+            }
+            @include m.desktop {
+                height: 40rem;
+            }
+        }
+    }
+}
+
+.marcador-personalizado {
+    position: absolute;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: v.$blanco;
+    z-index: 10;
+
+    .pulso {
+        width: 2rem;
+        height: 2rem;
+        background: v.$color_secundario_1;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        animation: pulse-animation 2s infinite;
+    }
+
+    span {
+        position: absolute;
+        bottom: -2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        text-shadow: 0 0 3px rgba(v.$negro, 0.8);
+    }
+}
+
+@keyframes pulse-animation {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+}
+
+.columna-derecha {
+    background-color: v.$blanco;
+    padding: 2rem;
+    border-radius: v.$radius-md;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    #grafico-uv {
+        > div:first-child {
+            margin-bottom: 1.5rem;
+
+            h2 {
+                margin-bottom: 0.5rem;
+            }
+
+            time, p {
+                font-family: v.$fuente_secundario;
+                color: v.$plomo;
+                font-size: 1.4rem;
+                margin: 0;
+            }
+        }
+
+        .grafico-uv-contenedor {
+            background-color: v.$blanco;
+            border-radius: v.$radius-md;
+            overflow: hidden;
+            box-shadow: v.$shadow-sm;
+
+            canvas {
+                width: 100% !important;
+                height: auto !important;
+            }
+        }
+    }
+
+    #leyenda-uv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        background-color: color.adjust(v.$blanco, $lightness: -3%);
+        border-radius: v.$radius-md;
+
+        img {
+            padding-top:2rem;
+            max-width: 100%;
+            height: 9rem;
+            object-fit: contain;
+        }
+    }
+
+    #valores-numericos {
+        .info-actualizacion {
+            text-align: right;
+            margin-bottom: 1rem;
+
+            p {
+                font-family: v.$fuente_secundario;
+                color: v.$plomo;
+                font-size: 1.2rem;
+                margin: 0;
+            }
+        }
+
+        .grid-valores {
+            @include m.grid(1, 1rem);
+
+            @include m.telefono {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include m.tablet {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .valor {
+                background-color: v.$negroClaro;
+                padding: 1.5rem;
+                border-radius: v.$radius-md;
+                text-align: center;
+                transition: all 0.3s ease;
+                box-shadow: v.$shadow-sm;
+
+                &:hover {
+                    transform: translateY(-3px);
+                    box-shadow: v.$shadow-md;
+                }
+
+                p {
+                    margin: 0;
+                    font-weight: bold;
+                    font-family: v.$fuente_secundario;
+                    color: v.$color_primario_1;
+                    font-size: 1.4rem;
+
+                    span {
+                        color: v.$color_quinto_2;
+                        font-size: 2.4rem;
+                        display: block;
+                        margin-top: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

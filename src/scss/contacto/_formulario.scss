@@ -1,0 +1,70 @@
+@use "sass:color";
+
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.google-forms {
+    background-color: v.$fondo_2; // Fondo en todo el ancho
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+
+    .form-on, .form-off {
+        // background: linear-gradient(135deg, v.$fondo_4, color.adjust(v.$fondo4, $lightness: -10%)  ); // Degradado moderno
+        background-color: v.$fondo_4;
+        padding: 15px;
+        font-weight: bold;
+        color: v.$negroClaro2;
+        font-family: v.$fuente_terciaria;
+        font-size: 2rem;
+        text-transform: uppercase;
+        border-radius: 12px;
+        width: 80%;
+        margin: 20px auto;
+        box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    .form-container {
+        background-color: v.$color_quinto_3;
+        padding: 20px;
+        border-radius: 12px;
+        width: 85%;
+        margin: auto;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+
+        iframe {
+            width: 100%;
+            height: 700px; // Más alto para evitar scroll
+            border: none;
+            border-radius: 8px;
+        }
+    }
+
+    // Responsive para dispositivos móviles
+    @include m.telefono {
+        .form-on, .form-off {
+            width: 95%;
+            font-size: 1.6rem;
+        }
+
+        .form-container {
+            width: 95%;
+        }
+    }
+
+    @include m.tablet {
+        .form-on, .form-off {
+            width: 90%;
+        }
+
+        .form-container {
+            width: 90%;
+        }
+    }
+}

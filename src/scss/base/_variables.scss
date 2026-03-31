@@ -1,0 +1,128 @@
+/* ================================
+ * VARIABLES.SCSS  
+ * ================================ */
+// Fuentes
+$fuente_principal: "Roboto Slab", serif;      //  100 to 900
+$fuente_secundario: "Inter", serif;           //  100 to 900
+$fuente_terciaria: "Source Sans 3", serif;    //  200 to 900
+
+// Media queries
+$telefono: 375px;
+$tablet: 768px;
+$desktop: 1024px;    
+
+// Colores - Sistema de colores organizado
+// Primarios 
+$color_primario_1: #03045e;       // titulo
+$color_primario_2: #335474;       // titulo
+$color_primario_3: #020345;       // titulo
+
+// Secundarios
+$color_secundario_1: #298456;     // subtitulo
+$color_secundario_2: #174a30;     // subtitulo
+$color_secundario_3: #195151;     // subtitulo
+
+// Terciarios
+$color_terciario_1: #333333;      // texto
+$color_terciario_2: #262626;      // texto
+$color_terciario_3: #010114;      // texto
+
+// Acentos
+$color_quinto_1: #257878;         // bottom
+$color_quinto_2: #3fc4c4;         // bottom
+$color_quinto_3: #6a94bd;         // bottom
+
+// Fondos
+$fondo_1: #f6f3ea;                // fondo 1 (melon)
+$fondo_2: #dfdfdf;                // fondo 2 (gris)
+$fondo_3: #dff7e1;                // fondo 3 (verde)
+$fondo_4: #d7e8ff;                // fondo 4 (azul)
+
+// Neutros
+$negro: #000000;
+$blanco: #FFFFFF;
+$plomo: #626262; 
+$negroRojo: #73676b;
+$azulClaro1: #b7b7d1;
+$verde: #e5efe5;
+$negroClaro: #dbdbdb;
+$azulClaro2: #ededfd;
+$negroClaro2: #1F1E1E;
+
+
+// COLORES PRINCIPALES - Basados en el logo
+// Escala de azules (mar/cielo/agua)
+$azul-100: #E6F3FF;
+$azul-200: #B7D5F8;
+$azul-300: #74ADEE;
+$azul-400: #3886E0;    // Color principal
+$azul-500: #1C6DD0;    // Base azul
+$azul-600: #0E559B;
+$azul-700: #03045E;    // Más oscuro
+
+// Escala de verdes (tierra/agricultura/ambiente)
+$verde-100: #E9F8EF;
+$verde-200: #C5ECD7;
+$verde-300: #89D9A8;
+$verde-400: #4DC380;   // Color principal
+$verde-500: #25A359;   // Base verde
+$verde-600: #177F43;
+$verde-700: #0B4F28;   // Más oscuro
+
+// COLOR DE ACENTO - Para acciones, destacados
+$turquesa-100: #E0F7F6;
+$turquesa-200: #B2EEEC;
+$turquesa-300: #73D9D6;
+$turquesa-400: #39C5C1; // Color principal
+$turquesa-500: #0ABAB5; // Base turquesa
+$turquesa-600: #068F8B;
+$turquesa-700: #056360; // Más oscuro
+
+// Neutros
+$neutro-100: #FFFFFF;  // Blanco
+$neutro-200: #F7F9FC;  // Fondo muy sutil
+$neutro-300: #EDF0F7;  // Fondo con tono
+$neutro-400: #D0D6E2;  // Bordes, separadores
+$neutro-500: #8C93A4;  // Texto secundario
+$neutro-600: #4D5566;  // Texto principal
+$neutro-700: #2D3142;  // Texto destacado
+$neutro-800: #181C28;  // Texto intenso
+
+// Colores de estado
+$exito: #2E7D32;       // Mensajes de éxito
+$advertencia: #F57C00; // Advertencias
+$error: #D84315;       // Errores
+$info: #0288D1;        // Información
+$amarillo:#f8ce0b;    //estrellas
+$naranja:#ffa500;
+// COLORES SECTORIALES - Para diferentes áreas de negocio
+$health: #9C27B0;      // Sector salud
+$tech: #3D5AFE;        // Sector tecnología
+$ocean: #039BE5;       // Sector oceanografía
+$agro: #43A047;        // Sector agricultura/ganadería
+$morado:#9C27B0;
+// Unidades y medidas estandarizadas
+$separacion-larga:10rem;
+$separacion: 5rem;
+$separacion-corta:3rem;
+
+
+// Sombras
+$sombra-suave: 0 2px 4px rgba($negro, 0.1);
+$sombra-media: 0 0.5rem 1rem rgba($negro, 0.1);
+$sombra-fuerte: 0 1rem 2rem rgba($negro, 0.15);
+
+
+
+// Unidades y medidas estandarizadas
+$radius-sm: 0.5rem;
+$radius-md: 1rem;
+$radius-lg: 2rem;
+$shadow-sm: 0 2px 4px rgba($negro, 0.1);
+$shadow-md: 0 0.5rem 1rem rgba($negro, 0.1);
+$shadow-lg: 0 1rem 2rem rgba($negro, 0.15);
+
+// Transiciones
+$transicion: all 0.3s ease;
+
+

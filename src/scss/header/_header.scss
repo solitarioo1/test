@@ -1,0 +1,96 @@
+   @use '../base/variables' as v;
+   @use '../base/mixins' as m;
+   
+   .header {
+    position: relative;
+    padding: 1rem 0;
+    overflow: hidden;
+    opacity:0.9;
+        
+    @include m.tablet {
+        min-height: 40rem;
+        padding: 5rem 0;
+    }
+    
+    @include m.desktop {
+        min-height: 50rem;
+        padding: 8rem 0;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(v.$neutro-800, 0.7);
+        z-index: 1;
+    }
+   }
+   
+   .contenido-header {
+       position: relative;
+       z-index: 2;
+       max-width: 120rem;
+       margin: 0 auto;
+       padding: 1rem 0.5rem;
+       
+       @include m.flex(column, center, center);
+   
+       h1 {
+           color: v.$negroClaro;
+           text-transform: uppercase;
+           margin-top: 3rem;
+           margin-bottom: 4rem;
+           font-size: 1rem;
+           text-shadow: 0 2px 4px v.$negro;
+           padding-bottom: 2.5rem;
+                      
+           @include m.tablet {
+                font-size: 2rem; 
+                margin-top: 4rem;
+                padding-bottom: 3rem;
+
+           } 
+           
+           @include m.desktop {
+               font-size: 2.5rem;
+               margin-top: v.$separacion;
+           }
+       }
+   }
+   
+   // Headers específicos para cada página
+   // Configuración de imágenes de fondo para diferentes secciones
+   
+   .header-inicio {
+       background-image: url(../img/navegador/nubes_index.webp);
+       background-size: cover;
+       background-position: center center;
+   }
+   
+   .header-nosotros {
+       background-image: url(../img/navegador/investigacion_02.webp);
+       background-size: cover;
+       background-position: center bottom;
+
+   }
+   
+   .header-productos {
+       background-image: url(../img/navegador/rios_01.webp);
+       background-size: cover;
+       background-position: center bottom;
+   }
+   
+   .header-registros {
+       background-image: url(../img/navegador/mecatronica_01.webp);
+       background-size: cover;
+       background-position: center center;
+   }
+   
+   .header-contactos {
+       background-image: url(../img/navegador/contactanos_3.webp);
+       background-size: cover;
+       background-position: top center;
+   }

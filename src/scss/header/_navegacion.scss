@@ -1,0 +1,68 @@
+
+  @use '../base/variables' as v;
+  @use '../base/mixins' as m;
+  
+  .nav-principal {
+    @include m.flex(row, center, center, 0.5rem);
+    margin-top: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+    position:relative;
+    @include m.tablet {
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: 0;
+        width: auto;
+    }
+
+    a {
+        color: v.$neutro-100;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        position: relative;
+        transition: v.$transicion; 
+        font-family: v.$fuente_secundario;
+               
+        @include m.tablet {
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+        }
+        
+        @include m.desktop {
+            font-size: 2rem;
+            margin: 0 1rem; 
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+        }
+        
+        &:hover {
+            color: v.$color_quinto_2;
+            
+            &::after {
+                width: 100%;
+                left: 0;
+            }
+        }
+
+        &.activo {
+            color: v.$color_quinto_2;
+            font-weight: 700;
+            
+            &::after {
+                width: 100%;
+                left: 0;
+                height: 3px;
+            }
+        }
+    }
+  }
+  

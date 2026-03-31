@@ -1,0 +1,331 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.misiones-empresa {
+    background-color: v.$neutro-300;
+    position: relative;
+    min-height: 40rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    margin-top: 0rem;
+    align-items: center;
+    overflow: hidden;
+    padding-top:3rem;
+
+    // Elementos decorativos de fondo
+    &::before {
+        content: '';
+        position: absolute;
+        width: 0rem;
+        height: 15rem;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(v.$color_quinto_2, 0.2) 0%, rgba(v.$color_quinto_2, 0) 70%);
+        top: -5rem;
+        left: -5rem;
+        z-index: 0;
+        animation: pulse 8s ease-in-out infinite alternate;
+    }
+    
+    &::after {
+        content: '';
+        position: absolute;
+        width: 25rem;
+        height: 25rem;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(v.$color_secundario_1, 0.15) 0%, rgba(v.$color_secundario_1, 0) 70%);
+        bottom: -10rem;
+        right: -10rem;
+        z-index: 0;
+        animation: pulse 12s ease-in-out infinite alternate-reverse;
+    }
+    
+    @include m.tablet {
+        min-height: 60rem;
+        grid-template-columns: 1fr 1fr;
+        gap: calc(v.$separacion/2);
+        padding: calc(v.$separacion / 2) 0;
+        margin: 0 auto;
+    }
+    
+    @include m.desktop {
+        margin-bottom: 0rem;
+        // border-radius: 10rem;
+    }
+} 
+
+.mision-vision-empresa {
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    animation: fadeInLeft 1.2s ease-out forwards;
+    
+    @include m.tablet {
+        margin-left: 2rem;
+        padding: 2rem 1rem 2rem 0;
+    }
+    
+    @include m.desktop {
+        margin-left: 3rem;
+        padding: 2rem;
+    }
+    
+    h2 {
+        font-family: v.$fuente_secundario;
+        font-weight: 700;
+        text-align: start;
+        margin-bottom: 1rem;
+        position: relative;
+        padding-bottom: 1.2rem;
+        
+        @include m.tablet {
+            font-size: 1.9rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        @include m.desktop {
+            font-size: 2.4rem;
+        }
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 8rem;
+            height: 0.2rem;
+            background: linear-gradient(to right, v.$azul-600, v.$turquesa-500);
+            border-radius: v.$radius-sm;
+            animation: expandWidth 2.5s ease-out forwards;
+            transform-origin: left;
+            @include m.tablet {height: 0.3rem; }
+            @include m.desktop {height: 0.4rem; }
+
+        }
+    }
+    
+    p {
+        text-align: justify;
+        font-family: v.$fuente_terciaria;
+        padding: 0.5rem 0;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+        color: v.$neutro-600;
+        font-size: 1.4rem;
+        position: relative;
+        overflow: hidden;
+        transform: translateY(20px);
+        opacity: 0;
+        animation: fadeInUp 1.2s ease-out 0.5s forwards;
+        transition: all 0.3s ease;
+        
+        @include m.tablet {
+            font-size: 1.6rem;
+            margin:1rem 0rem;
+        }
+        @include m.desktop {
+            font-size: 1.9rem;
+        }
+        
+        &::first-letter {
+            font-size: 2.6rem;
+            font-weight: 600;
+            color: v.$neutro-500;
+            float: left;
+            padding-right: 0.4rem;
+            line-height: 1;
+        }
+        
+        &:hover {
+            color: v.$neutro-700;
+            transform: translateX(5px);
+        }
+    }
+
+}
+
+.imagenes-misiones {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    animation: fadeInRight 1s ease-out forwards;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(v.$fondo_1, 0.1) 0%, rgba(v.$fondo_4, 0.1) 100%);
+        z-index: -1;
+    }
+}
+
+.imagen-superior {
+    background-size: cover;
+    background-position: right;
+    clip-path: polygon(60% 0, 100% 0, 100% 100%, 33% 100%);
+    animation: 
+        cambioImagenSuperior 10s infinite,
+        floatUp 8s ease-in-out infinite alternate;
+    transition: background-image 2s ease, transform 0.5s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(v.$color_secundario_1, 0.2) 0%, rgba(v.$color_quinto_1, 0.2) 100%);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    
+    &:hover {
+        transform: scale(1.03) translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        
+        &::before {
+            opacity: 1;
+        }
+    }
+}
+
+.imagen-inferior {
+    background-size: cover;
+    background-position: left bottom;
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+    animation: 
+        cambioImagenInferior 10s infinite,
+        floatDown 7s ease-in-out infinite alternate;
+    transition: background-image 1.5s ease, transform 0.5s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(v.$color_primario_1, 0.2) 0%, rgba(v.$color_secundario_3, 0.2) 100%);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    
+    &:hover {
+        transform: scale(1.03) translateY(5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        
+        &::before {
+            opacity: 1;
+        }
+    }
+} 
+
+/* Animación para la imagen superior */
+@keyframes cambioImagenSuperior {
+    0%, 45% {
+        background-image: url('/build/img/navegador/agricultura_01.webp');
+    }
+    50%, 80% {
+        background-image: url('/build/img/navegador/investigacion_03.webp');
+    }
+    100% {
+        background-image: url('/build/img/navegador/mecatronica_01.webp');
+    }
+}
+
+/* Animación para la imagen inferior */
+@keyframes cambioImagenInferior {
+    0%, 45% {
+        background-image: url('/build/img/navegador/nubes_03.webp');
+    }
+    50%, 80% {
+        background-image: url('/build/img/imagenes_extras/granizo_tomate_02.webp');
+    }
+    100% {
+        background-image: url('/build/img/imagenes_extras/monitoreo_02.webp');
+    }
+}
+
+/* Nuevas animaciones */
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes floatDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0.1;
+    }
+}
+
+@keyframes expandWidth {
+    0% {
+        width: 3rem;
+    }
+    100% {
+        width: 8rem;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

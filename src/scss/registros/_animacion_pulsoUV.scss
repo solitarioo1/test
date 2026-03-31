@@ -1,0 +1,42 @@
+/* CSS SIMPLE para marcadores UV */
+.custom-uv-marker {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Evitar márgenes automáticos de Leaflet */
+.leaflet-marker-icon {
+    margin-left: -10px !important;
+    margin-top: -10px !important;
+}
+
+/* Estilos para la lista de estaciones */
+.station-btn {
+    width: 100%;
+    padding: 12px 15px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.station-btn:hover {
+    background: #f8f9fa;
+    border-color: #007bff;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 123, 255, 0.15);
+}
+
+.station-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 123, 255, 0.2);
+}
+
+.station-name {
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+}

@@ -1,0 +1,81 @@
+/* ================================
+ * UTILIDADES.SCSS  
+ * ================================ */
+
+
+@use'mixins' as m;
+@use 'variables' as v;
+
+.text-center{
+    text-align:center;
+    
+}
+
+.bg-primario{
+    background-color: v.$color_primario_1;
+}
+
+ul {
+    list-style-type: none;
+    text-align:center;
+    line-height:1.5;
+    color:v.$color_primario_2;
+    padding:0;
+    margin:0;    
+
+}
+li{
+    font-family: v.$fuente_terciaria;
+    color:v.$fondo_2;
+
+}
+
+
+.h2-raya{
+
+    text-align: center;
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: v.$color_primario_1;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20rem;
+        height: 0.5rem;
+        background: linear-gradient(to right, v.$color_quinto_1, v.$color_quinto_2);
+    }
+}
+
+.h3-raya{
+    color: v.$color_primario_2;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-family: v.$fuente_secundario;
+    position: relative;
+    padding-bottom: 1rem;
+    @include m.tablet {
+        font-size: 2.2rem;
+
+    }
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 6rem;
+        height: 0.4rem;
+        background: linear-gradient(to right, v.$color_quinto_1, v.$color_quinto_2);
+        border-radius: 1rem;
+    }
+}

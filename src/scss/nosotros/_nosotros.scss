@@ -1,0 +1,165 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.nosotros {
+    position: relative;
+    background-color: v.$neutro-400; // Using the updated color system
+    padding: 2rem 0rem;
+    z-index: 2;
+
+    
+    @include m.tablet {
+        margin:auto ;
+        margin-top: - calc(v.$separacion); 
+        padding: v.$separacion 1rem;
+        padding-bottom: v.$separacion-corta;
+
+
+    }
+    @include m.desktop {
+        margin-top: - calc(v.$separacion-larga);            
+    }
+}
+        
+.sobre-empresa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .empresa-titulo {
+        margin-bottom: 1rem;
+
+        @include m.tablet{margin-bottom: 1rem;}
+        @include m.desktop{margin-bottom: v.$separacion-corta;}
+
+        
+        h2 {
+            color: v.$turquesa-700; 
+            font-family: v.$fuente_secundario;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+            position: relative;
+            transition: v.$transicion;
+    
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -0.7rem;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 12rem;
+                height: 3px;
+                background: linear-gradient(to right, v.$turquesa-500, v.$verde-500);
+                border-radius: v.$radius-sm;
+
+                @include m.tablet{ height: 3px; width: 20rem;  }
+                @include m.desktop{ height: 4px; width: 25rem;  }
+
+            }
+    
+            @include m.tablet {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+
+            }
+            
+            @include m.desktop {
+                font-size: 3rem;
+                margin-bottom: 1.5rem;
+
+            }
+        }
+    }
+}
+
+.empresa-contenido {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    align-items: center;
+    max-width: 120rem;
+    margin: 0 auto;
+    
+    @include m.tablet {
+        padding-top: 0rem;
+        margin-bottom:1rem;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 0rem;
+    }
+    @include m.desktop {
+        margin-bottom:2rem;
+        grid-template-columns: 1.3fr 1.5fr;
+        gap: 2rem;
+    }
+
+    .empresa-imagen {        
+        display: flex;
+        justify-content: center;
+        
+        img {
+            max-width: 70%;
+            transform: rotate(-3deg);
+            border: 1.5rem solid v.$neutro-100;
+            transition: v.$transicion;
+            
+            @include m.tablet {
+                max-width: 100%;
+                width: 90%;
+                box-shadow: v.$shadow-md;
+            }
+            
+            @include m.desktop {
+                border: 2rem solid v.$neutro-100;
+            }
+            
+            &:hover {
+                transform: rotate(0deg);
+                box-shadow: v.$shadow-lg;
+            }
+        }
+    }
+    
+    .empresa-texto {
+        @include m.tablet {
+            grid-column: 2; 
+            grid-row: 1;
+        }
+        
+        p {
+            text-align: justify;
+            padding: 0 calc(v.$separacion-corta/3);
+            color: v.$neutro-700; 
+            font-family: v.$fuente_terciaria; 
+            line-height: 1.8;
+            font-size: 1.3rem;
+            margin-top:0.5rem;
+            
+            @include m.tablet {
+                padding: calc(v.$separacion-corta/2);
+                font-size: 1.5rem;
+
+            }
+            
+            @include m.desktop {
+                font-size: 1.9rem;
+                margin-top:2rem;
+                padding: calc(v.$separacion-corta);
+
+
+            }
+            
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+        }
+        
+        strong {
+            color: v.$azul-600;
+            font-weight: 600;
+        }
+    }
+}

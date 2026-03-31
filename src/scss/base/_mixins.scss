@@ -1,0 +1,101 @@
+/* ================================
+ * MIXINS.SCSS 
+ * ================================ */
+ @use 'variables' as v;
+
+ // Responsive breakpoints
+ @mixin telefono {
+     @media (min-width: v.$telefono) {
+         @content;  
+     }
+ }
+ 
+ @mixin tablet {
+     @media (min-width: v.$tablet) {
+         @content;  
+     }
+ }
+ 
+ @mixin desktop {
+     @media (min-width: v.$desktop) {
+         @content;  
+     }
+ }
+ 
+ // Grid system
+ @mixin grid($columnas, $espaciado) {
+     display: grid;
+     grid-template-columns: repeat($columnas, 1fr);
+     gap: $espaciado;
+ }
+ 
+ // Flexbox helpers
+ @mixin flex($direction: row, $justify: center, $align: center, $gap: 0) {
+     display: flex;
+     flex-direction: $direction;
+     justify-content: $justify;
+     align-items: $align;
+     @if $gap > 0 {
+         gap: $gap;
+     }
+ }
+ 
+ // Text overflow helpers
+ @mixin text-truncate {
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+ }
+ 
+ // Position helpers
+ @mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+     position: $position;
+     @if $top { top: $top; }
+     @if $right { right: $right; }
+     @if $bottom { bottom: $bottom; }
+     @if $left { left: $left; }
+ }
+ 
+ // Decoradores comunes
+ @mixin decorador-linea($width: 6rem, $height: 0.4rem, $direction: left) {
+     position: relative;
+     padding-bottom: 1rem;
+     
+     &::after {
+         content: '';
+         position: absolute;
+         bottom: 0;
+         height: $height;
+         background: linear-gradient(to right, v.$color_quinto_1, v.$color_quinto_2);
+         border-radius: v.$radius-sm;
+         
+         @if $direction == center {
+             left: 50%;
+             transform: translateX(-50%);
+             width: $width;
+         } @else if $direction == left {
+             left: 0;
+             width: $width; 
+         } @else if $direction == right {
+             right: 0;
+             width: $width;
+         } @else if $direction == full {
+             left: 0;
+             width: 100%;
+         }
+     }
+ }
+ 
+
+ // Ocultar visualmente pero mantener accesible para lectores de pantalla
+ @mixin sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}

@@ -1,0 +1,47 @@
+/* ================================
+ * GLOBALES.SCSS
+ * ================================ */
+@use 'variables' as v;
+
+html{
+    font-size:62.5%;
+    box-sizing:border-box;    
+}
+
+*,*:before, *:after{
+    box-sizing:inherit;
+}
+
+main{
+    background-color: v.$blanco;
+}
+
+body{
+    font-family:v.$fuente_principal;
+    font-size:1.6rem;
+    background-color:v.$fondo_1;
+}
+ 
+
+p{
+    font-size:1.6rem;    
+}
+
+.contenedor{
+    width:95%;
+    max-width: 120rem;
+    margin:0 auto ;
+ 
+
+}
+
+a {
+    text-decoration:none;
+    color:v.$color_primario_1;
+}
+
+img {
+    max-width: 100%;
+    display:block;
+}
+

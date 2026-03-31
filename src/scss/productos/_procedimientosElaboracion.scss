@@ -1,0 +1,279 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.header-procedimientos { 
+    margin-top:2rem;
+    padding: 2rem 0 3rem ;
+    background-color: v.$azul-100;
+    position: relative;
+    text-align: center;
+
+    @include m.tablet{
+        padding-top:11rem;
+        padding-bottom:5rem;
+    }
+    @include m.desktop{
+        padding-top:11rem;
+        padding-bottom:10rem;
+    }
+
+    h2{
+        font-size: 1.6rem;
+        color:v.$turquesa-700;
+
+        @include m.tablet{
+            font-size: 2rem;
+        }
+
+        @include m.desktop{
+            font-size: 2.7rem;
+        }
+    }
+}
+
+.procedimientos-container {
+    display: flex;
+    justify-content: center;
+    max-width: 140rem;
+    padding: 0 2rem;
+}
+
+.pasos-contenido {
+    position: relative;
+    width: 100%;
+    height: 40rem;
+
+    @include m.grid(3, 0rem);
+    
+    @include m.tablet {
+        padding: 2rem 0;
+        height: 80rem;
+    }
+
+    @include m.desktop {
+        display: block;
+        height: 85rem;
+        margin: 0 auto;
+    }
+}
+
+.paso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+
+    @include m.desktop {
+        margin-bottom: 3rem;
+    }
+
+    
+    &::before {
+        content: attr(data-step);
+        font-size: 1.4rem;
+        font-weight: 700;
+        background-color: v.$neutro-400;
+        color: v.$azul-500;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -0.5rem;
+        right: 35%;
+        z-index: 4;
+        transition: background-color 0.3s ease;
+        
+        @include m.tablet {
+            width: 3rem;
+            height: 3rem;
+            font-size: 1.6rem;
+            right: 50%;
+
+        }
+        
+        @include m.desktop {
+            position: relative;
+            width: 3.5rem;
+            height: 3.5rem;
+            font-size: 1.8rem;
+            top: -0.8rem;
+            right: 0;
+        }
+    }
+    
+    @include m.tablet {
+        position: absolute;
+        width: clamp(22rem, 18vw, 25rem);
+        
+        &:nth-child(1) { left: 5%; top: 2rem; }
+        &:nth-child(2) { left: 20%; top: 23rem; }
+        &:nth-child(3) { left: 35%; top: 2rem; }
+        &:nth-child(4) { left: 50%; top: 23rem; }
+        &:nth-child(5) { left: 65%; top: 2rem; }
+        &:nth-child(6) { 
+            left: 40%; 
+            top: 45rem;
+            width: clamp(15rem, 20vw, 25rem); 
+    
+            .octagon {
+                width: clamp(22rem, 20vw, 28rem); 
+                height: clamp(22rem, 20vw, 28rem); 
+            }
+            
+        }
+    }
+
+    @include m.desktop {
+    position: absolute;
+    width: clamp(22rem, 18vw, 25rem);
+    
+    &:nth-child(1) { left: 2%; top: 2rem; }
+    &:nth-child(2) { left: 20%; top: 18rem; }
+    &:nth-child(3) { left: 40%; top: 2rem; }
+    &:nth-child(4) { left: 60%; top: 18rem; }
+    &:nth-child(5) { left: 78%; top: 2rem; }
+    &:nth-child(6) { 
+        left: 40%; 
+        top: 45rem;
+        width: clamp(28rem, 24vw, 34rem); 
+
+        .octagon {
+            width: clamp(26rem, 24vw, 32rem); 
+            height: clamp(26rem, 24vw, 32rem); 
+        }
+        
+        .descripcion-pasos {
+            font-size:1.5rem; 
+            max-width: 40rem; 
+            font-weight: 700;
+        }
+    }
+    }
+}
+
+.octagon {
+    width: clamp(10rem, 12vw, 12rem);
+    height: clamp(10rem, 12vw, 12rem);
+    position: relative;
+    margin-bottom: 2.5rem;
+    background-color: v.$blanco;
+    transition: all 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    box-shadow: 0 0.3rem 1rem v.$negroClaro;
+    z-index: 3;
+    transform: rotate(45deg);
+    overflow: hidden;
+    
+    // Octagon shape using clip-path
+    clip-path: polygon(
+        20% 0%, 70% 0%, 100% 30%, 100% 70%,
+        70% 100%, 30% 100%, 0% 70%, 0% 30%
+    );
+    
+    // Border for octagon (since clip-path removes regular borders)
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        right: 0.5rem;
+        bottom: 0.5rem;
+        background-color: v.$blanco;
+        z-index: -1;
+        clip-path: polygon(
+            30% 0%, 70% 0%, 100% 30%, 100% 70%,
+            70% 100%, 30% 100%, 0% 70%, 0% 30%
+        );
+    }
+    
+    // Smooth size increase for tablet and desktop
+    @include m.tablet {
+        width: clamp(15rem, 15vw, 20rem);
+        height: clamp(15rem, 15vw, 20rem);
+        margin-bottom: 3rem;
+    }
+
+    @include m.desktop {
+        width: clamp(20rem, 18vw, 23rem);
+        height: clamp(20rem, 18vw, 23rem); 
+        margin-bottom: 3.5rem;
+    }
+
+    // Container for the image to counter-rotate
+    .octagon-content {
+        width: 100%;
+        height: 100%;
+        display: block;
+        transform: rotate(-45deg);
+        transform-origin: center;
+        transition: transform 0.4s ease;
+        position: relative;
+        
+        img {
+            width: 142%; 
+            height: 142%;
+            object-fit: cover;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            display: block;
+        }
+    }
+
+    // Active state for click interaction
+    &:active {
+        transform: rotate(45deg) scale(1.15);
+        
+        .octagon-content {
+            transform: rotate(-45deg) scale(1.05);
+        }
+    }
+}
+
+// Border style for octagon
+.octagon-border {
+    position: absolute;
+    inset: 0;
+    border: 0.5rem solid v.$verde;
+    clip-path: polygon(
+        30% 0%, 70% 0%, 100% 30%, 100% 70%,
+        70% 100%, 30% 100%, 0% 70%, 0% 30%
+    );
+    transition: border-color 0.3s ease;
+    z-index: 2;
+    
+    .paso:hover & {
+        border-color: v.$color_secundario_1;
+    }
+}
+
+// Text description for each step
+.descripcion-pasos {
+    font-family: v.$fuente_secundario;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 500;
+    color: v.$negro;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    max-width: 25rem;
+    // margin: 0 auto;
+
+    @include m.desktop {
+        color: v.$turquesa-600;
+        background-color: v.$neutro-200;
+        border-radius: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        box-shadow: 0 0.2rem 0.5rem v.$negroClaro;
+    }
+}
+
+// Optional: container for better spacing
+.procedimientos-section {
+    padding: v.$separacion-corta 0;
+    background-color: v.$fondo_1;
+}

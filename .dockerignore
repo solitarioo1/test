@@ -1,0 +1,58 @@
+# Dependencies (se instalan en el build)
+vendor/
+node_modules/
+
+# Assets compilados (se generan en el build)
+public/build/css/
+public/build/js/
+public/build/img/
+
+# Archivos de entorno sensibles
+.env
+.env.local
+.env.staging
+.env.production
+
+# Git
+.git/
+.gitignore
+
+# Archivos de desarrollo
+src/
+gulpfile.js
+package.json
+package-lock.json
+
+# Base de datos
+*.sql
+*.sqlite
+*.db
+*.dump
+
+# Logs
+*.log
+logs/
+log/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Temporales
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Docker
+Dockerfile
+.dockerignore
+docker/
+
+# README
+README.md

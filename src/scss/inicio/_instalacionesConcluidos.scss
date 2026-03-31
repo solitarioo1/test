@@ -1,0 +1,176 @@
+@use '../base/variables' as v;
+@use '../base/mixins'    as m;
+@use 'sass:math';
+
+.instalaciones-concluidos {
+  padding: calc(v.$separacion/2) 1.6rem 1rem 1.6rem;
+  background-color: v.$neutro-200;
+  text-align: center;
+  @include m.tablet{
+    padding: v.$separacion-corta 1.6rem;
+  }
+
+  // Título y descripción
+  h2 {
+    font-weight: 700;
+    color: v.$azul-700;
+    position: relative;
+    margin-bottom: v.$separacion-corta;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: clamp(6rem, 10vw, 8rem);
+      height: 0.4rem;
+      background: linear-gradient(to right, v.$verde-400, v.$turquesa-400);
+      border-radius: v.$radius-sm;
+    }
+    span { color: v.$turquesa-500; }
+  }
+
+  .descripcion-instalaciones {
+    margin: 0 auto 2.5rem;
+    font-size: 1.3rem;
+    color: v.$neutro-600;
+    text-align: justify;
+
+    @include m.tablet{
+      font-size: 1.5rem;
+      max-width: 70rem;
+    }
+        @include m.desktop{
+      font-size: 1.8rem;
+      max-width: 100rem;
+    }
+  }
+
+  // Contador de instalaciones
+  .contador-instalaciones {
+    margin:auto 1rem;
+    @include m.flex(row, center, center, v.$separacion-corta);
+
+    .contador {
+      flex: 1 1 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 0.5rem;
+      
+      @include m.tablet{
+        padding: 0 v.$separacion-corta;
+      }
+
+      .numero {
+        font-size: 3rem;
+        font-weight: 700;
+        color: v.$turquesa-600;
+        cursor: default;
+        @include m.tablet{
+          font-size: clamp(2rem, 10vw, 4rem);
+        }
+        @include m.desktop{
+          font-size: clamp(3rem, 10vw, 6rem);
+        }
+
+      }
+      .texto {
+        font-size: clamp(1.2rem, 3vw, 1.6rem);
+        color: v.$neutro-700;
+        @include m.desktop{
+          font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+      }
+    }
+  }
+
+
+
+
+
+  // Carrusel de instalaciones
+  .carrusel-instalaciones {
+    margin: 2.5rem 0 1rem 0;
+    display: flex;
+    gap: v.$separacion-corta;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+    @include m.tablet{
+      margin: v.$separacion-corta 0;
+    }
+    .instalacion {
+      flex: 0 0 80%;
+      max-width: 80%;
+      scroll-snap-align:start;
+      background-color: v.$neutro-100;
+      border-radius: v.$radius-md;
+      box-shadow: v.$shadow-sm;
+      overflow: hidden;
+      transition: transform v.$transicion;
+
+
+      &:hover { transform: scale(1.02); }
+
+      .imagen-instalacion img {
+        width: 100%;
+        display: block;
+        @include m.tablet{
+          height: auto;
+        }
+      }
+      .detalles-instalacion {
+        padding: 1rem;
+        h3 { font-size: clamp(1.3rem, 4vw, 1.8rem); margin: 0; }
+        p  { font-size: clamp(1.2rem, 3vw, 1.4rem); margin: 0.5rem 0 0; color: v.$neutro-600; }
+        
+        @include m.tablet{
+        padding: v.$separacion-corta;
+        h3 { font-size: clamp(1.5rem, 4vw, 2rem); margin: 0; }
+        p  { font-size: clamp(1.5rem, 3vw, 1.8rem); margin: 0.5rem 0 0; color: v.$neutro-600; }
+
+        }
+      
+      }
+    }
+
+    @include m.tablet {
+      .instalacion { flex: 0 0 40%; max-width: 40%; }
+    }
+    @include m.desktop {
+      .instalacion { flex: 0 0 math.div(100%, 3); max-width: math.div(100%, 3); }
+    }
+  }
+
+  // Controles del carrusel
+  .controles-carrusel {
+    @include m.flex(row, center, center, v.$separacion-corta);
+    button {
+      background: v.$turquesa-600;
+      border: none;
+      color: v.$neutro-800;
+      padding: 0.8rem 1rem;
+      margin: 0 0.5rem;
+      border-radius: v.$radius-sm;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: background v.$transicion;
+      
+      @include m.tablet{
+        font-size: 1.8rem;
+      }
+
+      @include m.tablet{
+        font-size: 2.2rem;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: default;
+      }
+      &:hover:not(:disabled) { background: v.$turquesa-600; }
+    }
+  }
+}

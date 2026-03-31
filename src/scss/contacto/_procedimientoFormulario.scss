@@ -1,0 +1,215 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.procedimiento-formulario {
+  background-color: v.$fondo_2;
+  padding: 3rem 0;
+  margin: 2rem 0 0;
+
+  @include m.tablet {
+    padding-left:1.5rem;
+    padding-right:1.5rem;
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  @include m.desktop {
+    grid-template-columns: 0.6fr 1fr;
+
+  }
+
+  .video-formulario {
+    width: 100%;
+    margin-bottom: 4rem;
+    
+    @include m.tablet {
+      margin-bottom: 0;
+    }
+    
+    iframe {
+      width: 100%;
+      height: 25rem;
+      
+      @include m.tablet {
+        height: 40rem;
+      }
+      
+      @include m.desktop {
+        height: 42rem;
+      }
+    }
+  }
+
+  .pasos-formulario {
+    position: relative;
+    width: 100%;
+    height: 45rem;
+    margin-top: 2rem;
+    
+    @include m.telefono {
+      height: 32rem;
+    }
+    
+    @include m.tablet {
+      height: 35rem;
+    }
+    
+    @include m.desktop {
+      height: 40rem;
+    }
+    
+    .paso {
+      position: absolute;
+      width: 13rem;
+      transition: transform 0.3s ease;    
+      
+      &:hover {
+        transform: scale(1.05);
+      }
+      
+      img {
+        border-radius: 50%;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border: 2px solid v.$color_quinto_1;
+      }
+      
+      .numero {
+        position: absolute;
+        top: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: v.$blanco;
+        color: v.$color_primario_1;
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-family: v.$fuente_secundario;
+        z-index: 1;
+        border: 2px solid v.$color_quinto_1;
+      }
+    }
+    
+    // Móvil - posición vertical escalonada
+
+    .paso-1,
+    .paso-2,
+    .paso-3,
+    .paso-4,
+    .paso-5 {
+      &::before {
+        content: '';
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        background-color: v.$color_quinto_2;
+        border-radius: 50%;
+        top: 30%;
+        left: 20%;
+        z-index: 1;
+      }
+
+    }
+    .paso-1 {
+      left: 5%;
+      top: 0;
+    }
+    .paso-2 {
+      left: 5%;
+      top: 18rem;
+    }
+    .paso-3 {
+      left: 35%;
+      top: 8rem;
+    }
+    .paso-4 {
+      left: 65%;
+      top: 0;
+    }
+    .paso-5 {
+      left: 65%;
+      top: 18rem;
+    }
+    
+    // Tablet positioning
+    @include m.tablet {
+      .paso {
+        width: clamp(15rem, 15vw, 15rem);
+      }
+      
+      .paso-1 {
+        left: 0;
+        top: 0;
+      }
+      
+      .paso-2 {
+        left: 65%;
+        top: 0;
+      }
+      
+      .paso-3 {
+        left: 35%;
+        top: 12rem;
+
+      }
+      
+      .paso-4 {
+        left: 0;
+        top: 24rem;
+      }
+      
+      .paso-5 {
+        left: 65%;
+        top: 24rem;
+      }
+    }
+    
+    // Desktop positioning
+    @include m.desktop {
+      .paso {
+        width: clamp(16rem, 14vw, 23rem);
+
+      }
+      
+      .paso-1 { 
+        left: 0%; 
+        top: 2rem; 
+      }
+      
+      .paso-2 { 
+        left: 17%; 
+        top: 20rem; 
+      }
+      
+      .paso-3 { 
+        left: 35%; 
+        top: 2rem; 
+      }
+      
+      .paso-4 { 
+        left: 53%; 
+        top: 20rem; 
+      }
+      
+      .paso-5 { 
+        left: 72%; 
+        top: 2rem; 
+        // transform: translateX(-50%);
+      }
+      
+      .numero {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

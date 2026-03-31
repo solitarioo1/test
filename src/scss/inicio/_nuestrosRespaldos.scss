@@ -1,0 +1,316 @@
+@use '../base/variables' as v;
+@use '../base/mixins'    as m;
+
+.nuestras-alianzas {
+  background: linear-gradient(135deg,v.$blanco 0%,v.$blanco 100%);
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: v.$neutro-400
+  }
+
+  @include m.tablet {
+    padding: 5rem 0;
+  }
+
+  @include m.desktop {
+    padding: 6rem 0;
+    margin-bottom: -10rem;
+    position: relative;
+    z-index: 5;
+  }
+
+  .contenedor {
+    position: relative;
+    z-index: 2;
+  }
+
+  .descripcion-respaldos {
+    font-family: v.$fuente_terciaria;
+    font-size: 1.5rem;
+    color: v.$neutro-600;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
+    text-align: center;
+    max-width: 60rem;
+    font-weight: 400;
+
+    @include m.tablet {
+      font-size: 1.7rem;
+      max-width: 70rem;
+      margin-bottom: 4rem;
+    }
+    
+    @include m.desktop {
+      font-size: 1.9rem;
+      margin-bottom: 5rem;
+    }
+  }
+
+  .carousel {
+    overflow: hidden;
+    position: relative;
+    padding: 1rem 0;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 3rem;
+      z-index: 3;
+      pointer-events: none;
+
+      @include m.tablet { width: 4rem; }
+      @include m.desktop { width: 5rem; }
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(90deg, v.$neutro-500, transparent);
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(-90deg, v.$neutro-500, transparent);
+    }
+
+    .track {
+      display: flex;
+      gap: 1.5rem;
+      animation: marquee 5s linear infinite;
+      will-change: transform;
+
+      @include m.tablet { 
+        gap: 2rem;
+        animation-duration: 5s;
+      }
+      @include m.desktop { 
+        gap: 2.5rem;
+        animation-duration: 5s;
+      }
+    }
+
+    &:hover .track {
+      animation-play-state: paused;
+    }
+  }
+
+  .alianza-item {
+    flex-shrink: 0;
+    width: 23rem;
+    height: 20rem;
+    background: v.$blanco;
+    border-radius: 1.2rem;
+    padding: 1rem 0.5rem ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+    
+    box-shadow: 
+      0 4px 6px -1px v.$neutro-400,
+      0 2px 4px -1px v.$neutro-500;
+    
+    border: 1px solid v.$neutro-100;
+    
+    transition: 
+      transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      border-color 0.3s ease;
+
+    @include m.tablet {
+      width: 27rem;
+      height: 26rem;
+      padding: 0rem 2rem 3rem;
+    }
+
+    @include m.desktop {
+      width: 30rem;
+      height: 30rem;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.8) 50%, transparent 100%);
+      opacity: 0;
+      border-radius: inherit;
+      transition: opacity 0.3s ease;
+    }
+
+    .logo-container {
+      width: 100%;
+      height: 12rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+
+      @include m.tablet {
+        height: 20rem;
+      }
+
+      @include m.desktop {
+        height: 25rem;
+      }
+    }
+
+    img {
+      max-width: 85%;
+      max-height: 85%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      filter: grayscale(0.15) brightness(0.98);
+      transition: 
+        filter 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    span {
+      font-family: v.$fuente_terciaria;
+      font-size: 1.3rem;
+      color: v.$neutro-700;
+      text-align: center;
+      line-height: 1.4;
+      font-weight: 500;
+      position: relative;
+      z-index: 2;
+      transition: color 0.3s ease;
+
+      @include m.tablet {
+        font-size: 1.4rem;
+      }
+
+      @include m.desktop {
+        font-size: 1.5rem;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 
+        0 20px 25px -5px v.$neutro-500,
+        0 10px 10px -5px v.$neutro-700;
+      border-color:v.$turquesa-200;
+
+      &::before {
+        opacity: 1;
+      }
+
+      img {
+        filter: grayscale(0) brightness(1.05) contrast(1.1);
+        transform: scale(1.05);
+      }
+
+      span {
+        color: v.$color_quinto_2;
+        font-weight: 600;
+      }
+    }
+
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        animation: slideInUp 0.6s ease-out #{$i * 0.1s} both;
+      }
+    }
+  }
+
+  .frase-respaldos {
+    margin-top: 3rem;
+    text-align: start;
+    position: relative;
+
+    @include m.tablet {
+      margin-top: 6rem;
+    }
+
+    p {
+      font-family: v.$fuente_secundario;
+      font-size: 1.5rem;
+      line-height: 1.6;
+      color: v.$neutro-700;
+      font-weight: 400;
+      margin: 0 0rem;
+
+      @include m.tablet {
+        font-size: 1.8rem;
+        margin: 0 2rem;
+
+      }
+      
+      @include m.desktop { 
+        font-size: 2rem;
+        margin: 0 3rem;
+
+      }
+
+      span {
+        color: v.$color_quinto_1;
+        font-weight: 700;
+        position: relative;
+      }
+    }
+  }
+
+  @keyframes marquee {
+    from { 
+      transform: translateX(0); 
+    }
+    to { 
+      transform: translateX(-50%); 
+    }
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce ) {
+    .carousel .track {
+      animation: none;
+      
+    }
+    
+    .alianza-item {
+      animation: none;
+      
+      &:hover {
+        transform: translateY(-4px) scale(1.01);
+      }
+    }
+  }
+
+  @media (hover: none) {
+    .alianza-item:hover {
+      transform: none;
+      box-shadow: 
+        0 4px 6px -1px v.$neutro-600,
+        0 2px 4px -1px v.$neutro-700;
+    }
+  }
+}

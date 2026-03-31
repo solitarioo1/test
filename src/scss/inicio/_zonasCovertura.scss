@@ -1,0 +1,94 @@
+@use '../base/variables' as v;
+@use '../base/mixins'    as m;
+
+.zonas-cobertura {
+  background-color: v.$fondo_2;
+  padding: v.$separacion-corta 0;
+  text-align: center;
+
+  .contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-family: v.$fuente_secundario;
+    font-size: 2.4rem;
+    color: v.$color_primario_1;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    span { color: v.$color_terciario_1; }
+
+    @include m.tablet { font-size: 3rem; }
+    @include m.desktop { font-size: 3.6rem; }
+  }
+
+  .mapa-contenedor {
+    width: 100%;
+    /* en lugar de height fija: */
+    aspect-ratio: 4 / 3;
+    max-width: 120rem;
+    margin: 2rem auto;
+    border-radius: v.$radius-md;
+    overflow: hidden;
+    box-shadow: v.$sombra-media;
+  }
+
+  .informacion-cobertura {
+    display: grid;
+    gap: 2rem;
+    margin: 3rem auto;
+
+    @include m.telefono { grid-template-columns: 1fr; }
+    @include m.tablet { grid-template-columns: repeat(3, 1fr); gap: 3rem; }
+    @include m.desktop { gap: 4rem; }
+
+    .dato-cobertura {
+      background-color: v.$neutro-100;
+      padding: 2rem;
+      border-radius: v.$radius-md;
+      box-shadow: v.$sombra-suave;
+      text-align: center;
+      transition: v.$transicion;
+
+      .numero {
+        display: block;
+        font-family: v.$fuente_secundario;
+        font-size: 3rem;
+        color: v.$color_primario_1;
+      }
+
+      .texto {
+        display: block;
+        margin-top: 0.5rem;
+        font-family: v.$fuente_terciaria;
+        font-size: 1.4rem;
+        color: v.$neutro-600;
+      }
+
+      &:hover {
+        transform: translateY(-0.5rem);
+        box-shadow: v.$sombra-fuerte;
+      }
+    }
+  }
+
+  .texto-cobertura {
+    margin-top: 3rem;
+
+    p {
+      font-family: v.$fuente_terciaria;
+      font-size: 1.6rem;
+      color: v.$neutro-700;
+      margin-bottom: 1.5rem;
+      @include m.tablet { font-size: 1.8rem; }
+    }
+
+    .boton-secundario {
+      @extend .boton-secundario;
+      font-size: 1.4rem;
+      padding: 0.8rem 2rem;
+    }
+  }
+}

@@ -1,0 +1,155 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.preguntas-frecuentes {
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: v.$neutro-400;
+    box-shadow: 0 0.5rem 1rem rgba(v.$negro, 0.1);
+    margin-bottom: 0rem;
+    position:relative;
+    z-index:3;
+
+    @include m.tablet {
+        padding: 4rem;
+        margin-top: 0;
+        margin-bottom: -5rem;
+    }
+
+    @include m.desktop {
+        margin: 0rem auto;
+        padding-bottom:8rem;
+        margin-bottom: -10rem;
+
+    }
+
+    h1 {
+        color: v.$turquesa-600;
+        font-weight: 700;
+        font-size: 1.7rem;
+        margin-bottom: 2.5rem;
+
+        @include m.tablet {
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+        }
+    }
+    .faq-grid{
+        @include m.desktop{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            gap:2rem;
+        }
+    }
+
+    .faq-category {
+        margin-bottom: 1.5rem;
+
+        @include m.tablet {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-family: v.$fuente_secundario;
+            color: v.$color_quinto_1;
+            font-weight: 600;
+            font-size: 1.2rem;
+            text-align: left;
+            border-bottom: 0.2rem solid v.$color_quinto_1;
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.5rem;
+
+            @include m.tablet {
+                font-size: 1.5rem;
+                padding-bottom: 1rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border-bottom: 0.1rem solid v.$neutro-600;
+
+            &:last-of-type {
+                border-bottom: none;
+            }
+
+            @include m.tablet {
+                margin-bottom: 1.5rem;
+            }
+
+            .faq-question {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                padding: 0.7rem;
+                background-color: v.$fondo_1;
+                color: v.$neutro-600;
+                font-family: v.$fuente_principal;
+                font-size: 1.1rem;
+                font-weight: 500;
+                cursor: pointer;
+                border-radius: v.$radius-sm;
+                transition: background-color 0.3s ease, color 0.3s ease;
+                position: relative;
+
+                @include m.tablet {
+                    font-size: 1.3rem;
+                    padding: 1.5rem;
+                }
+
+                &:hover,
+                &:focus-visible {
+                    background-color: v.$fondo_4;
+                    outline: none;
+                }
+
+                &::after {
+                    content: '+';
+                    font-size: 1.2rem;
+                    color: v.$color_quinto_1;
+                    font-weight: 300;
+
+                    @include m.tablet {
+                        font-size: 2.4rem;
+                    }
+                }
+
+                &.active {
+                    background-color: v.$fondo_4;
+                    color: v.$color_primario_1;
+
+                    &::after {
+                        content: '-';
+                    }
+                }
+            }
+
+            .faq-answer {
+                font-family: v.$fuente_terciaria;
+                color: v.$color_terciario_1;
+                font-size: 1.1rem;
+                line-height: 1.6;
+                overflow: hidden;
+                max-height: 0;
+                padding: 0;
+                transition: all 0.3s ease;
+
+                @include m.tablet {
+                    font-size: 1.3rem;
+                }
+
+                &.show {
+                    max-height: 50rem;
+                    padding: 1.2rem;
+                    background-color: v.$blanco;
+                    text-align: justify;
+
+                    @include m.tablet {
+                        padding: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

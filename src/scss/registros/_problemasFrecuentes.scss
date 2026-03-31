@@ -1,0 +1,257 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+// Animaciones - condensadas
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulseGlow { 
+  0% { box-shadow: 0 0 5px rgba(v.$azul-300, 0.1); }
+  50% { box-shadow: 0 0 15px rgba(v.$azul-400, 0.3); }
+  100% { box-shadow: 0 0 5px rgba(v.$azul-300, 0.1); }
+}
+@keyframes floatImage { 0% { transform: translateY(0); } 50% { transform: translateY(-5px); } 100% { transform: translateY(0); } }
+@keyframes gradientFlow { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+
+.problemas-frecuentes {
+  background-color: v.$neutro-300;
+  background-size: 200% 200%;
+  animation: gradientFlow 15s ease infinite;
+  padding: 1rem 0;
+  position: relative;
+  overflow: hidden;
+  z-index:7;
+
+  @include m.tablet{
+      width:95%;
+      max-width: 120rem;
+      margin:0 auto ;
+  }
+  
+  @include m.tablet { 
+        padding: v.$separacion-corta 0.5rem;
+        margin-bottom:-6rem; 
+        padding-bottom:15rem ;}
+  
+  .titulo-principal {
+    text-align: center;
+    color: v.$turquesa-700;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: 2rem;
+    position: relative;
+    animation: fadeIn 1s ease-out;
+    
+    @include m.tablet { font-size: 2.2rem; padding-bottom: 3rem; margin-bottom: 0; }
+    @include m.desktop { font-size: 2.5rem; padding-top: 5rem; margin-bottom: 3rem; }
+  }
+
+  // Grid de problemas
+  .contenedor-problemas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin: 0 auto;
+    align-items: stretch;
+    position: relative;
+    
+    @include m.tablet { gap: 1.2rem; }
+    @include m.desktop { 
+      gap: 1.5rem; 
+      max-width: 1200px; 
+      margin: 0 auto; 
+    }
+  }
+}
+
+// Columnas de imágenes
+.columna-imagen {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1s ease-out;
+  
+  @include m.tablet { gap: 1.5rem; }
+  @include m.desktop { gap: 2rem; }
+
+  .caja-imagen {
+    background: v.$azul-100;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      .imagen-animada { transform: scale(1.05); filter: brightness(1.1); }
+    }
+    
+    @include m.tablet {
+      height: 100%;
+      padding: 0.8rem;
+      border-radius: v.$radius-md;
+      box-shadow: v.$shadow-md;
+      &:hover { box-shadow: v.$shadow-lg; }
+    }
+    
+    @include m.desktop {
+      padding: 1rem;
+      animation: pulseGlow 4s infinite;
+      &:nth-child(1) { animation-delay: 0s; }
+      &:nth-child(2) { animation-delay: 1.3s; }
+      &:nth-child(3) { animation-delay: 2.6s; }
+    }
+  }
+
+  .imagen-animada {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    animation: floatImage 6s ease-in-out infinite;
+    
+    @include m.tablet { border-radius: v.$radius-md; }
+  }
+}
+
+// Posicionamiento de columnas
+.izquierda { 
+  order: 1; 
+  .caja-imagen { animation-delay: 0.3s; }
+}
+
+.derecha { 
+  order: 3; 
+  .caja-imagen { animation-delay: 0.6s; }
+}
+
+// Columna de contenido
+.columna-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  order: 2;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1.2s ease-out;
+
+  @include m.tablet { gap: 1.2rem; }
+  @include m.desktop { gap: 1.5rem; }
+
+  .caja-pregunta {
+    background: v.$neutro-200;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: v.$radius-md;
+    box-shadow: 0 3px 6px v.$azul-200;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
+    
+    &:nth-child(1) { animation-delay: 0.2s; }
+    &:nth-child(2) { animation-delay: 0.4s; }
+    &:nth-child(3) { animation-delay: 0.6s; }
+    &:nth-child(4) { animation-delay: 0.8s; }
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(v.$turquesa-100, 0.2) 0%, rgba(v.$blanco, 0) 70%);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(v.$azul-300, 0.3);
+      
+      &::before { opacity: 1; }
+      h2 { color: v.$turquesa-600; }
+    }
+    
+    @include m.tablet {
+      padding: 1rem;
+      height: 100%;
+    }
+    
+    @include m.desktop {
+      padding: 2rem;
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      &:hover { transform: translateY(-8px) scale(1.02); }
+    }
+  }
+
+  h2 {
+    color: v.$turquesa-700;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    text-align: center;
+    padding-top: 0.5rem;
+    transition: color 0.3s ease;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      width: 0rem;
+      height: 1rem;
+      background: v.$turquesa-300;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+    
+    @include m.tablet {
+      font-size: 1.3rem;
+      margin-bottom: 0.4rem;
+      &::after { height: 2px; }
+    }
+    
+    @include m.desktop {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  .respuesta {
+    text-align: justify;
+    font-weight: 300;
+    line-height: 1.3rem;
+    font-size: 1.2rem;
+    color: v.$negro;
+    transition: all 0.3s ease;
+    
+    strong {
+      color: v.$neutro-600;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      &:hover { color: v.$verde-500; }
+    }
+    
+    @include m.tablet {
+      line-height: 1.6rem;
+      font-size: 1.4rem;
+      font-weight: 300;
+    }
+    
+    @include m.desktop {
+      line-height: 2rem;
+      font-size: 1.6rem;
+    }
+  }
+}
