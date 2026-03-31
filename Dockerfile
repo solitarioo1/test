@@ -1,10 +1,6 @@
-# ========================================
-# PHP + Apache (production)
-# Assets ya compilados en el repo
-# ========================================
 FROM php:8.2-apache-bullseye
 
-# Variables de build desde EasyPanel
+# Variables de EasyPanel
 ARG APP_ENV=production
 ARG APP_DEBUG=false
 ARG APP_URL=http://localhost
@@ -25,7 +21,6 @@ ARG MAIL_PASSWORD
 ARG MAIL_FROM_ADDRESS
 ARG MAIL_FROM_NAME=IntiSmart
 
-# Convertir a variables de entorno
 ENV APP_ENV=${APP_ENV} \
     APP_DEBUG=${APP_DEBUG} \
     APP_URL=${APP_URL} \
@@ -46,39 +41,40 @@ ENV APP_ENV=${APP_ENV} \
     MAIL_FROM_ADDRESS=${MAIL_FROM_ADDRESS} \
     MAIL_FROM_NAME=${MAIL_FROM_NAME}
 
-# Install system dependencies and PHP extensions
-RUN apt-get update && apt-get install -y \
-    libpng-dev \
-    libjpeg-dev \
-    libfreetype6-dev \
-    libzip-dev \
-    zip unzip curl \
+# Extensiones PHP necesarias (Debian Bullseye)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        libpng-dev \
+        libjpeg62-turbo-dev \
+        libfreetype6-dev \
+        libzip-dev \
+        libonig-dev \
+        zip \
+        unzip \
+        curl \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install pdo pdo_mysql mysqli gd mbstring zip \
+    && docker-php-ext-install -j$(nproc) pdo pdo_mysql mysqli gd mbstring zip \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Composer
+# Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-# Enable Apache modules
+# Apache
 RUN a2enmod rewrite headers deflate expires
-
-# Copy Apache VirtualHost config
 COPY docker/apache.conf /etc/apache2/sites-available/000-default.conf
 
 WORKDIR /var/www/html
 
-# Copy project files
+# Copiar proyecto (assets ya compilados en repo)
 COPY . .
 
-# Install PHP dependencies (no dev, optimized)
+# Dependencias PHP
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
-# Copy and set entrypoint
+# Entrypoint
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
-# Set permissions
+# Permisos
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html
 
