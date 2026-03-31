@@ -1,13 +1,10 @@
-# Dependencies (se instalan en el build)
+# Excluir archivos que NO son necesarios para el build
+
+# Dependencies (se instalan con composer/npm en el build)
 vendor/
 node_modules/
 
-# Assets compilados (se generan en el build)
-public/build/css/
-public/build/js/
-public/build/img/
-
-# Archivos de entorno sensibles
+# Archivos de entorno sensibles (se generat en docker-entrypoint.sh)
 .env
 .env.local
 .env.staging
@@ -15,13 +12,11 @@ public/build/img/
 
 # Git
 .git/
-.gitignore
 
-# Archivos de desarrollo
-src/
-gulpfile.js
-package.json
-package-lock.json
+# Assets compilados (se generan en el build)
+public/build/css/
+public/build/js/
+public/build/img/
 
 # Base de datos
 *.sql
@@ -49,10 +44,5 @@ desktop.ini
 *.bak
 *.backup
 
-# Docker
-Dockerfile
-.dockerignore
-docker/
-
-# README
+# README (no necesario en producción)
 README.md

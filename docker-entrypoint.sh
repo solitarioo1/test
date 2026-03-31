@@ -2,7 +2,7 @@
 set -e
 
 # Genera el archivo .env dentro del contenedor a partir de las
-# variables de entorno configuradas en EasyPanel
+# variables de entorno que pasó EasyPanel como build-args
 cat > /var/www/html/.env << EOF
 # Aplicación
 APP_ENV=${APP_ENV:-production}
@@ -25,17 +25,19 @@ CHATBOT_DB_PASSWORD=${CHATBOT_DB_PASSWORD}
 # Google Gemini AI
 GEMINI_API_KEY=${GEMINI_API_KEY}
 
-# Email (Amazon SES)
-MAIL_HOST=${MAIL_HOST:-email-smtp.us-east-1.amazonaws.com}
+# Email (Amazon SES o SMTP)
+MAIL_HOST=${MAIL_HOST}
 MAIL_PORT=${MAIL_PORT:-587}
 MAIL_USERNAME=${MAIL_USERNAME}
 MAIL_PASSWORD=${MAIL_PASSWORD}
-MAIL_FROM=${MAIL_FROM}
+MAIL_FROM=${MAIL_FROM_ADDRESS}
 MAIL_FROM_NAME=${MAIL_FROM_NAME:-IntiSmart}
 EOF
 
 # Ajustar permisos del .env
 chown www-data:www-data /var/www/html/.env
 chmod 640 /var/www/html/.env
+
+echo "✅ Archivo .env generado correctamente"
 
 exec "$@"
