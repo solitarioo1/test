@@ -6,12 +6,17 @@ FROM node:20 AS builder
 WORKDIR /app
 
 COPY package.json ./
-RUN npm install
+# --ignore-scripts evita compilar Sharp (módulo nativo) que no necesitamos
+RUN npm install --ignore-scripts
 
 COPY gulpfile.js ./
 COPY src/ ./src/
 
-RUN npm run build
+# Compilar solo CSS y JS (no images — ya son .webp, se copian directo)
+RUN npx gulp css && npx gulp javascript
+
+# Copiar imágenes .webp directamente sin procesar
+RUN mkdir -p ./public/build/img && cp -r src/img/* ./public/build/img/
 
 # ========================================
 # Stage 2: PHP + Apache (production)
