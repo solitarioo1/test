@@ -2,7 +2,7 @@
 # PHP + Apache (production)
 # Assets ya compilados en el repo
 # ========================================
-FROM php:8.2-apache
+FROM php:8.2-apache-bullseye
 
 # Variables de build desde EasyPanel
 ARG APP_ENV=production
@@ -50,11 +50,9 @@ ENV APP_ENV=${APP_ENV} \
 RUN apt-get update && apt-get install -y \
     libpng-dev \
     libjpeg-dev \
-    libfreetype-dev \
+    libfreetype6-dev \
     libzip-dev \
-    zip \
-    unzip \
-    curl \
+    zip unzip curl \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install pdo pdo_mysql mysqli gd mbstring zip \
     && rm -rf /var/lib/apt/lists/*
