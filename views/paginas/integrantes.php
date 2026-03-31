@@ -31,7 +31,7 @@
       <!-- ---milagros -->
         <section class="tarjeta-practicante">
           <div class="contenedor-foto">
-            <img src="build/img/nosotros/_milagros.webp" alt="Foto del practicante" class="foto-practicante" />
+            <img src="/build/img/nosotros/_milagros.webp" alt="Foto del practicante" class="foto-practicante" />
           </div>
       
           <div class="informacion-practicante">
@@ -49,10 +49,10 @@
       
             <div class="redes-practicante">
               <a href="https://www.linkedin.com/in/milagros-evelyn-alejandria-rom%C3%A1n-b512a1308/" target="_blank" class="icono-linkedin">
-                <img src="build/img/redes/linkedin.ico" alt="LinkedIn" />
+                <img src="/build/img/redes/linkedin.ico" alt="LinkedIn" />
               </a>
               <a href="mailto:milagrosalejandria00@gmail.com" class="icono-correo">
-                <img src="build/img/redes/gmail.ico" alt="Correo" />
+                <img src="/build/img/redes/gmail.ico" alt="Correo" />
               </a>
             </div>
           </div>
@@ -63,7 +63,7 @@
       <!-- ---sergio -->
         <section class="tarjeta-practicante">
             <div class="contenedor-foto">
-              <img src="build/img/nosotros/_sergio.webp" alt="Foto del practicante" class="foto-practicante" />
+              <img src="/build/img/nosotros/_sergio.webp" alt="Foto del practicante" class="foto-practicante" />
             </div>
         
             <div class="informacion-practicante">
@@ -81,10 +81,10 @@
         
               <div class="redes-practicante">
                 <a href="https://www.linkedin.com/in/scwong02/" target="_blank" class="icono-linkedin">
-                  <img src="build/img/redes/linkedin.ico" alt="LinkedIn" />
+                  <img src="/build/img/redes/linkedin.ico" alt="LinkedIn" />
                 </a>
                 <a href="mailto:sergio.cruz.wong@gmail.com" class="icono-correo">
-                  <img src="build/img/redes/gmail.ico" alt="Correo" />
+                  <img src="/build/img/redes/gmail.ico" alt="Correo" />
                 </a>
               </div>
             </div>
@@ -94,7 +94,7 @@
       <!-- ---nicolle -->
         <section class="tarjeta-practicante">
             <div class="contenedor-foto">
-              <img src="build/img/nosotros/_nicolle.webp" alt="Foto del practicante" class="foto-practicante" />
+              <img src="/build/img/nosotros/_nicolle.webp" alt="Foto del practicante" class="foto-practicante" />
             </div>
         
             <div class="informacion-practicante">
@@ -112,10 +112,10 @@
         
               <div class="redes-practicante">
                 <a href="#" target="_blank" class="icono-linkedin">
-                  <img src="build/img/redes/linkedin.ico" alt="LinkedIn" />
+                  <img src="/build/img/redes/linkedin.ico" alt="LinkedIn" />
                 </a>
                 <a href="mailto:nicolle.michelle2018@gmail.com" class="icono-correo">
-                  <img src="build/img/redes/gmail.ico" alt="Correo" />
+                  <img src="/build/img/redes/gmail.ico" alt="Correo" />
                 </a>
               </div>
             </div>
@@ -126,7 +126,7 @@
       <!-- ---yimmy -->
         <section class="tarjeta-practicante">
             <div class="contenedor-foto">
-            <img src="build/img/nosotros/_yimmy.webp" alt="Foto del practicante" class="foto-practicante" />
+            <img src="/build/img/nosotros/_yimmy.webp" alt="Foto del practicante" class="foto-practicante" />
             </div>
         
             <div class="informacion-practicante">
@@ -144,10 +144,10 @@
         
             <div class="redes-practicante">
                 <a href="https://www.linkedin.com/in/yimmy-puchuri-lloclla-69a432229/ " target="_blank" class="icono-linkedin">
-                <img src="build/img/redes/linkedin.ico" alt="LinkedIn" />
+                <img src="/build/img/redes/linkedin.ico" alt="LinkedIn" />
                 </a>
                 <a href="mailto:puchuriyimmy123@gmail.com" class="icono-correo">
-                <img src="build/img/redes/gmail.ico" alt="Correo" />
+                <img src="/build/img/redes/gmail.ico" alt="Correo" />
                 </a>
             </div>
             </div>
@@ -170,12 +170,12 @@
           
           <div class="galeria-simple">
               <div class="galeria-grid">
-                  <img src="build/img/ambiente_laboral/4_ambenteLaboral.webp" >
-                  <img src="build/img/ambiente_laboral/3_ambenteLaboral.webp" >
-                  <img src="build/img/ambiente_laboral/6_ambenteLaboral.webp" >
-                  <img src="build/img/ambiente_laboral/8_ambenteLaboral.webp" >
-                  <img src="build/img/ambiente_laboral/7_ambenteLaboral.webp" >
-                  <img src="build/img/ambiente_laboral/5_ambenteLaboral.webp" >
+                  <img src="/build/img/ambiente_laboral/4_ambenteLaboral.webp" >
+                  <img src="/build/img/ambiente_laboral/3_ambenteLaboral.webp" >
+                  <img src="/build/img/ambiente_laboral/6_ambenteLaboral.webp" >
+                  <img src="/build/img/ambiente_laboral/8_ambenteLaboral.webp" >
+                  <img src="/build/img/ambiente_laboral/7_ambenteLaboral.webp" >
+                  <img src="/build/img/ambiente_laboral/5_ambenteLaboral.webp" >
               </div>
           </div>
           

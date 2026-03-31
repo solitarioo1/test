@@ -41,23 +41,23 @@
         <div class="pasos-formulario">
             <div class="paso paso-1">
                 <div class="numero">1</div>
-                <img src="build/img/contactanos/1_recepcion.webp" alt="Paso 1">
+                <img src="/build/img/contactanos/1_recepcion.webp" alt="Paso 1">
             </div>
             <div class="paso paso-2">
                 <div class="numero">2</div>
-                <img src="build/img/contactanos/2_proteccion.webp" alt="Paso 2">
+                <img src="/build/img/contactanos/2_proteccion.webp" alt="Paso 2">
             </div>
             <div class="paso paso-3">
                 <div class="numero">3</div>
-                <img src="build/img/contactanos/3_analisis.webp" alt="Paso 3">
+                <img src="/build/img/contactanos/3_analisis.webp" alt="Paso 3">
             </div>
             <div class="paso paso-4">
                 <div class="numero">4</div>
-                <img src="build/img/contactanos/4_contactanos.webp" alt="Paso 4">
+                <img src="/build/img/contactanos/4_contactanos.webp" alt="Paso 4">
             </div>
             <div class="paso paso-5">
                 <div class="numero">5</div>
-                <img src="build/img/contactanos/5_reunion.webp" alt="Paso 5">
+                <img src="/build/img/contactanos/5_reunion.webp" alt="Paso 5">
             </div>
         </div>
     </header>
@@ -68,7 +68,7 @@
         <div class="testimonios-contenedor">
             <div class="testimonio">
                 <div class="testimonio-imagen">
-                    <img src="build/img/contactanos/testimonio_1.webp" alt="Cliente satisfecho">
+                    <img src="/build/img/contactanos/testimonio_1.webp" alt="Cliente satisfecho">
                 </div>
                 <div class="testimonio-contenido">
                     <p class="testimonio-texto">"El proceso fue increíblemente sencillo y el equipo siempre estuvo disponible para responder mis dudas. Totalmente recomendable para cualquiera que busque soluciones efectivas."</p>
@@ -86,7 +86,7 @@
     
             <div class="testimonio">
                 <div class="testimonio-imagen">
-                    <img src="build/img/contactanos/testimonio_2.webp" alt="Cliente satisfecho">
+                    <img src="/build/img/contactanos/testimonio_2.webp" alt="Cliente satisfecho">
                 </div>
                 <div class="testimonio-contenido">
                     <p class="testimonio-texto">"Después de seguir los 5 pasos del proceso, obtuve resultados mucho mejores de lo que esperaba. La atención personalizada marcó la diferencia en mi experiencia."</p>
@@ -104,7 +104,7 @@
     
             <div class="testimonio">
                 <div class="testimonio-imagen">
-                    <img src="build/img/contactanos/testimonio_3.webp" alt="Cliente satisfecho">
+                    <img src="/build/img/contactanos/testimonio_3.webp" alt="Cliente satisfecho">
                 </div>
                 <div class="testimonio-contenido">
                     <p class="testimonio-texto">"Me impresionó la rapidez con la que respondieron a mi solicitud. El equipo fue profesional y me guiaron a través de todo el procedimiento. ¡Volveré a contactarlos!"</p>
@@ -122,7 +122,7 @@
 
             <div class="testimonio">
                 <div class="testimonio-imagen">
-                    <img src="build/img/contactanos/testimonio_4.webp" alt="Cliente satisfecho">
+                    <img src="/build/img/contactanos/testimonio_4.webp" alt="Cliente satisfecho">
                 </div>
                 <div class="testimonio-contenido">
                     <p class="testimonio-texto">"Me impresionó la rapidez con la que respondieron a mi solicitud. El equipo fue profesional y me guiaron a través de todo el procedimiento. ¡Volveré a contactarlos!"</p>
@@ -140,7 +140,7 @@
 
             <div class="testimonio">
                 <div class="testimonio-imagen">
-                    <img src="build/img/contactanos/testimonio_5.webp" alt="Cliente satisfecho">
+                    <img src="/build/img/contactanos/testimonio_5.webp" alt="Cliente satisfecho">
                 </div>
                 <div class="testimonio-contenido">
                     <p class="testimonio-texto">"El proceso fue increíblemente sencillo y el equipo siempre estuvo disponible para responder mis dudas. Totalmente recomendable para cualquiera que busque soluciones efectivas."</p>

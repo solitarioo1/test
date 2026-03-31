@@ -10,14 +10,14 @@ echo $contenido;
 
 
 
-    <!-- <<script src="build/js/chatbot-faqs.js"></script> -->
-    <!-- <script src="build/js/chatbot.js"></script> -->
-    <script src="build/js/api.js"></script>
-    <script src="build/js/estaciones.js"></script>
-    <script src="build/js/charts.js"></script>
+    <!-- <<script src="/build/js/chatbot-faqs.js"></script> -->
+    <!-- <script src="/build/js/chatbot.js"></script> -->
+    <script src="/build/js/api.js"></script>
+    <script src="/build/js/estaciones.js"></script>
+    <script src="/build/js/charts.js"></script>
     
-    <script src="build/js/main.min.js"></script>
-    <script src="build/js/chatbot.min.js"></script>
+    <script src="/build/js/main.min.js"></script>
+    <script src="/build/js/chatbot.min.js"></script>
 
 
 

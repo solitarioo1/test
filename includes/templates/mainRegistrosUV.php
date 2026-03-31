@@ -25,7 +25,7 @@
                         </div> 
                     </div>
                     <div id="leyenda-uv">
-                        <img src="build/img/niveles/legend.svg" alt="Leyenda de UV">
+                        <img src="/build/img/niveles/legend.svg" alt="Leyenda de UV">
                     </div>
                 </section>
             </div>
@@ -44,7 +44,7 @@
                     </div>
                 
                     <!-- <div id="leyenda-uv">
-                        <img src="build/img/niveles/legend.svg" alt="Leyenda de UV">
+                        <img src="/build/img/niveles/legend.svg" alt="Leyenda de UV">
                     </div> -->
                 
                     <div id="valores-numericos">

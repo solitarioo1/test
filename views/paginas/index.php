@@ -42,7 +42,7 @@
             <h2><span>nuestro</span> producto destacado</h2>
             <div class="contenedor-producto-estrella">
                 <div class="imagen-producto">
-                    <img src="build/img/productos/venta_6_producto.webp" alt="Semáforo Inti Smart">
+                    <img src="/build/img/productos/venta_6_producto.webp" alt="Semáforo Inti Smart">
                 </div>
                 <div class="info-producto">
                     <h3> Dispositivo IntiUV+ </h3>
@@ -80,7 +80,7 @@
             <div class="carrusel-instalaciones">
                 <div class="instalacion">
                     <div class="imagen-instalacion">
-                        <img src="build/img/productos/venta_6_producto.webp" alt="Universidad Nacional">
+                        <img src="/build/img/productos/venta_6_producto.webp" alt="Universidad Nacional">
                     </div>
                     <div class="detalles-instalacion">
                         <h3>Universidad Nacional Agraria La Molina</h3>
@@ -89,7 +89,7 @@
                 </div>
                 <div class="instalacion">
                     <div class="imagen-instalacion">
-                        <img src="build/img/productos/venta_6_producto.webp" alt="unalm puerta"p>
+                        <img src="/build/img/productos/venta_6_producto.webp" alt="unalm puerta"p>
                     </div>
                     <div class="detalles-instalacion">
                         <h3>Puerta 1</h3>
@@ -99,7 +99,7 @@
                 </div>
                 <div class="instalacion">
                     <div class="imagen-instalacion">
-                        <img src="build/img/productos/venta_6_producto.webp" alt="Municipalidad de Arequipa">
+                        <img src="/build/img/productos/venta_6_producto.webp" alt="Municipalidad de Arequipa">
                     </div>
                     <div class="detalles-instalacion">
                         <h3>Incubagraria - UNALM</h3>
@@ -108,7 +108,7 @@
                 </div>
                 <div class="instalacion">
                     <div class="imagen-instalacion">
-                        <img src="build/img/productos/venta_6_producto.webp" alt="Parque Metropolitano">
+                        <img src="/build/img/productos/venta_6_producto.webp" alt="Parque Metropolitano">
                     </div>
                     <div class="detalles-instalacion">
                         <h3>Observatorio Meteorólogico Alexander Von Humboldt (OVH)</h3>
@@ -128,7 +128,7 @@
             <div class="testimonios-contenedor">
                 <div class="testimonio">
                     <div class="testimonio-imagen">
-                        <img src="build/img/contactanos/testimonio_1.webp" alt="Cliente satisfecho">
+                        <img src="/build/img/contactanos/testimonio_1.webp" alt="Cliente satisfecho">
                     </div>
                     <div class="testimonio-contenido">
                         <p class="testimonio-texto">"El proceso fue increíblemente sencillo y el equipo siempre estuvo disponible para responder mis dudas. Totalmente recomendable para cualquiera que busque soluciones efectivas."</p>
@@ -146,7 +146,7 @@
         
                 <div class="testimonio">
                     <div class="testimonio-imagen">
-                        <img src="build/img/contactanos/testimonio_2.webp" alt="Cliente satisfecho">
+                        <img src="/build/img/contactanos/testimonio_2.webp" alt="Cliente satisfecho">
                     </div>
                     <div class="testimonio-contenido">
                         <p class="testimonio-texto">"Después de seguir los 5 pasos del proceso, obtuve resultados mucho mejores de lo que esperaba. La atención personalizada marcó la diferencia en mi experiencia."</p>
@@ -164,7 +164,7 @@
         
                 <div class="testimonio">
                     <div class="testimonio-imagen">
-                        <img src="build/img/contactanos/testimonio_3.webp" alt="Cliente satisfecho">
+                        <img src="/build/img/contactanos/testimonio_3.webp" alt="Cliente satisfecho">
                     </div>
                     <div class="testimonio-contenido">
                         <p class="testimonio-texto">"Me impresionó la rapidez con la que respondieron a mi solicitud. El equipo fue profesional y me guiaron a través de todo el procedimiento. ¡Volveré a contactarlos!"</p>
@@ -182,7 +182,7 @@
 
                 <div class="testimonio">
                     <div class="testimonio-imagen">
-                        <img src="build/img/contactanos/testimonio_4.webp" alt="Cliente satisfecho">
+                        <img src="/build/img/contactanos/testimonio_4.webp" alt="Cliente satisfecho">
                     </div>
                     <div class="testimonio-contenido">
                         <p class="testimonio-texto">"Me impresionó la rapidez con la que respondieron a mi solicitud. El equipo fue profesional y me guiaron a través de todo el procedimiento. ¡Volveré a contactarlos!"</p>
@@ -200,7 +200,7 @@
 
                 <div class="testimonio">
                     <div class="testimonio-imagen">
-                        <img src="build/img/contactanos/testimonio_5.webp" alt="Cliente satisfecho">
+                        <img src="/build/img/contactanos/testimonio_5.webp" alt="Cliente satisfecho">
                     </div>
                     <div class="testimonio-contenido">
                         <p class="testimonio-texto">"El proceso fue increíblemente sencillo y el equipo siempre estuvo disponible para responder mis dudas. Totalmente recomendable para cualquiera que busque soluciones efectivas."</p>
@@ -229,7 +229,7 @@
                 <div class="evolucion-item">
                     <div class="contenido-evolucion">
                         <div class="imagen-octagono">
-                            <img src="build/img/linea_tiempo/6_instalacionUnalm.webp" alt="Prototipo 1">
+                            <img src="/build/img/linea_tiempo/6_instalacionUnalm.webp" alt="Prototipo 1">
                         </div>
                         <div class="texto-evolucion">
                             <span class="anio"> (6) Junio 2025</span>
@@ -241,7 +241,7 @@
                 <div class="evolucion-item">
                     <div class="contenido-evolucion">
                         <div class="imagen-octagono">
-                            <img src="build/img/linea_tiempo/5_Ministerio.webp" alt="Prototipo 1">
+                            <img src="/build/img/linea_tiempo/5_Ministerio.webp" alt="Prototipo 1">
                         </div>
                         <div class="texto-evolucion">
                             <span class="anio"> (29) Mayo 2025</span>
@@ -253,7 +253,7 @@
                 <div class="evolucion-item">
                     <div class="contenido-evolucion">
                         <div class="imagen-octagono">
-                            <img src="build/img/linea_tiempo/4_empresa.webp" alt="Prototipo 1">
+                            <img src="/build/img/linea_tiempo/4_empresa.webp" alt="Prototipo 1">
                         </div>
                         <div class="texto-evolucion">
                             <span class="anio"> (4) Marzo 2025</span>
@@ -265,7 +265,7 @@
                 <div class="evolucion-item">
                     <div class="contenido-evolucion">
                         <div class="imagen-octagono">
-                            <img src="build/img/linea_tiempo/3_escalamiento.webp" alt="Reconocimiento">
+                            <img src="/build/img/linea_tiempo/3_escalamiento.webp" alt="Reconocimiento">
                         </div>
                         <div class="texto-evolucion">
                             <span class="anio"> (3) Enero 2025</span>
@@ -277,7 +277,7 @@
                 <div class="evolucion-item">
                     <div class="contenido-evolucion">
                         <div class="imagen-octagono">
-                            <img src="build/img/linea_tiempo/2_alianzaUnalm.webp" alt="Premio">
+                            <img src="/build/img/linea_tiempo/2_alianzaUnalm.webp" alt="Premio">
                         </div>
                         <div class="texto-evolucion">
                             <span class="anio"> (2) Noviempre 2024</span>
@@ -289,7 +289,7 @@
                 <div class="evolucion-item">
                     <div class="contenido-evolucion">
                         <div class="imagen-octagono">
-                            <img src="build/img/linea_tiempo/1_prototipo.webp" alt="Premio">
+                            <img src="/build/img/linea_tiempo/1_prototipo.webp" alt="Premio">
                         </div>
                         <div class="texto-evolucion">
                             <span class="anio"> (1) Setiembre 2024</span>
@@ -313,55 +313,55 @@
             <div class="track">
                 <div class="alianza-item">
                     <div class="logo-container">
-                        <img src="build/img/aliados/logo_cgta.webp" alt="logo_cgta">
+                        <img src="/build/img/aliados/logo_cgta.webp" alt="logo_cgta">
                     </div>
                     <span>Centro de Gestión y Tecnología Ambiental</span>
                 </div>
                 <div class="alianza-item">
                     <div class="logo-container">
-                        <img src="build/img/aliados/logo_cigerclim.webp" alt="logo_cigerclim">
+                        <img src="/build/img/aliados/logo_cigerclim.webp" alt="logo_cigerclim">
                     </div>
                     <span>Círculo de Investigación en Gestión de Riesgos Climáticos</span>
                 </div>
                 <div class="alianza-item">
                     <div class="logo-container">
-                        <img src="build/img/aliados/logo_cpta.webp" alt="logo_cpta">
+                        <img src="/build/img/aliados/logo_cpta.webp" alt="logo_cpta">
                     </div>
                     <span>Centro de Pronóstico del Tiempo Atmosférico</span>
                 </div>
                 <div class="alianza-item">
                     <div class="logo-container">
-                        <img src="build/img/aliados/logo_incubagraria.webp" alt="logo_incubagraria">
+                        <img src="/build/img/aliados/logo_incubagraria.webp" alt="logo_incubagraria">
                     </div>
                     <span>Incubagraria</span>
                 </div>
                 <div class="alianza-item">
                     <div class="logo-container">
-                        <img src="build/img/aliados/logo_ingenieros.webp" alt="logo_ingenieros">
+                        <img src="/build/img/aliados/logo_ingenieros.webp" alt="logo_ingenieros">
                     </div>
                     <span> Colegio de Ingenieros</span>
                 </div>
                 <div class="alianza-item">
                     <div class="logo-container">
-                        <img src="build/img/aliados/logo_minesterioMinas.webp" alt="logo_minesterioMinass">
+                        <img src="/build/img/aliados/logo_minesterioMinas.webp" alt="logo_minesterioMinass">
                     </div>
                     <span>Ministerio de Energía y Minas</span>
                 </div>
                 <div class="alianza-item">
                     <div class="logo-container">
-                        <img src="build/img/aliados/logo_pueblosAndinos.webp" alt="logo_pueblosAndinos">
+                        <img src="/build/img/aliados/logo_pueblosAndinos.webp" alt="logo_pueblosAndinos">
                     </div>
                     <span>Comision pueblos andinos</span>
                 </div>
                 <div class="alianza-item">
                     <div class="logo-container">
-                        <img src="build/img/aliados/logo_salud.webp" alt="logo_salud">
+                        <img src="/build/img/aliados/logo_salud.webp" alt="logo_salud">
                     </div>
                     <span>Ministerio de Salud</span>
                 </div>
                 <div class="alianza-item">
                     <div class="logo-container">
-                        <img src="build/img/aliados/logo_unalm.webp" alt="logo_unalm">
+                        <img src="/build/img/aliados/logo_unalm.webp" alt="logo_unalm">
                     </div>
                     <span>Universidad Nacional Agraria La Molina</span>
                 </div>

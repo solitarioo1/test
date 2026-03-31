@@ -111,7 +111,7 @@
                 <div class="octagon">
                     <div class="octagon-border"></div>
                     <div class="octagon-content">
-                        <img src="build/img/productos/proce_1_corte_lazer.webp" alt="Paso 1">
+                        <img src="/build/img/productos/proce_1_corte_lazer.webp" alt="Paso 1">
                     </div>
                 </div>
                 <div class="descripcion-pasos">corte láser</div>
@@ -121,7 +121,7 @@
                 <div class="octagon">
                     <div class="octagon-border"></div>
                     <div class="octagon-content">
-                        <img src="build/img/productos/proce_2_impresion3D.webp" alt="Paso 2">
+                        <img src="/build/img/productos/proce_2_impresion3D.webp" alt="Paso 2">
                     </div>
                 </div>
                 <div class="descripcion-pasos">impresiones 3d</div>
@@ -131,7 +131,7 @@
                 <div class="octagon">
                     <div class="octagon-border"></div>
                     <div class="octagon-content">
-                        <img src="build/img/productos/proce_3_electronica.webp" alt="Paso 3">
+                        <img src="/build/img/productos/proce_3_electronica.webp" alt="Paso 3">
                     </div>
                 </div>
                 <div class="descripcion-pasos"> Electrónica</div>
@@ -141,7 +141,7 @@
                 <div class="octagon">
                     <div class="octagon-border"></div>
                     <div class="octagon-content">
-                        <img src="build/img/productos/proce_4_prueba.webp" alt="Paso 4">
+                        <img src="/build/img/productos/proce_4_prueba.webp" alt="Paso 4">
                     </div>
                 </div>
                 <div class="descripcion-pasos">Prueba</div>
@@ -151,7 +151,7 @@
                 <div class="octagon">
                     <div class="octagon-border"></div>
                     <div class="octagon-content">
-                        <img src="build/img/productos/proce_5_ensamblado.webp" alt="Paso 5">
+                        <img src="/build/img/productos/proce_5_ensamblado.webp" alt="Paso 5">
                     </div>
                 </div>
                 <div class="descripcion-pasos">  ensablado</div>
@@ -161,7 +161,7 @@
                 <div class="octagon">
                     <div class="octagon-border"></div>
                     <div class="octagon-content">
-                        <img src="build/img/productos/proce_6_producto_final.webp" alt="Paso 6">
+                        <img src="/build/img/productos/proce_6_producto_final.webp" alt="Paso 6">
                     </div>
                 </div>
                 <div class="descripcion-pasos">Equipo Final</div>
@@ -175,12 +175,12 @@
             <h2 >Instalaciones a futuro</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio vitae vero quidem impedit praesentium velit culpa officiis tempore sed repellendus iste, a id? Non quam cupiditate placeat omnis esse recusandae! Lorem ipsum dolor sit amnesciunt.</p>
             <div class="grid">
-                <img src="build/img/lugares_instalacion/calles.webp " alt="imagen 1">
-                <img src="build/img/lugares_instalacion/playa4.webp " alt="imagen 2">
-                <img src="build/img/lugares_instalacion/estadios.webp" alt="imagen 3">
-                <img src="build/img/lugares_instalacion/universitario2.webp" alt="imagen 4">
-                <img src="build/img/lugares_instalacion/jugando_universidades.webp" alt="imagen 5">
-                <img src="build/img/lugares_instalacion/parque.webp" alt="imagen 5">
+                <img src="/build/img/lugares_instalacion/calles.webp " alt="imagen 1">
+                <img src="/build/img/lugares_instalacion/playa4.webp " alt="imagen 2">
+                <img src="/build/img/lugares_instalacion/estadios.webp" alt="imagen 3">
+                <img src="/build/img/lugares_instalacion/universitario2.webp" alt="imagen 4">
+                <img src="/build/img/lugares_instalacion/jugando_universidades.webp" alt="imagen 5">
+                <img src="/build/img/lugares_instalacion/parque.webp" alt="imagen 5">
 
             </div>
         </div>

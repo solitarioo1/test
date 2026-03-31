@@ -53,7 +53,7 @@
                         </div> 
                     </div>
                     <div id="leyenda-uv">
-                        <img src="build/img/niveles/legend.svg" alt="Leyenda de UV">
+                        <img src="/build/img/niveles/legend.svg" alt="Leyenda de UV">
                     </div>
                 </section>
             </div>
@@ -73,7 +73,7 @@
                     </div>
                 
                     <!-- <div id="leyenda-uv">
-                        <img src="build/img/niveles/legend.svg" alt="Leyenda de UV">
+                        <img src="/build/img/niveles/legend.svg" alt="Leyenda de UV">
                     </div> -->
                 
                     <div id="valores-numericos">
@@ -113,7 +113,7 @@
           </div>
       
           <div class="radiacion-imagen">
-            <img src="build/img/lugares_instalacion/altaTemperatura.webp" alt="Protección contra radiación">
+            <img src="/build/img/lugares_instalacion/altaTemperatura.webp" alt="Protección contra radiación">
           </div>
         </div>
     </section>
@@ -125,13 +125,13 @@
             <!-- Columna izquierda - Imágenes -->
             <div class="columna-imagen izquierda">
                 <div class="caja-imagen">
-                    <img src="build/img/salud/quemadura_piel.webp" alt="Radiación imagen 1" class="imagen-animada">
+                    <img src="/build/img/salud/quemadura_piel.webp" alt="Radiación imagen 1" class="imagen-animada">
                 </div>
                 <div class="caja-imagen">
-                    <img src="build/img/salud/playa.webp" alt="Radiación imagen 2" class="imagen-animada">
+                    <img src="/build/img/salud/playa.webp" alt="Radiación imagen 2" class="imagen-animada">
                 </div>
                 <div class="caja-imagen">
-                    <img src="build/img/lugares_instalacion/familia.webp" alt="Radiación imagen 3" class="imagen-animada">
+                    <img src="/build/img/lugares_instalacion/familia.webp" alt="Radiación imagen 3" class="imagen-animada">
                 </div>
             </div>
 
@@ -181,13 +181,13 @@
             <!-- Columna derecha - Imágenes -->
             <div class="columna-imagen derecha">
                 <div class="caja-imagen">
-                    <img src="build/img/salud/perdida_vista.webp" alt="Radiación imagen 4" class="imagen-animada">
+                    <img src="/build/img/salud/perdida_vista.webp" alt="Radiación imagen 4" class="imagen-animada">
                 </div>
                 <div class="caja-imagen">
-                    <img src="build/img/lugares_instalacion/estudiantes.webp" alt="Radiación imagen 5" class="imagen-animada">
+                    <img src="/build/img/lugares_instalacion/estudiantes.webp" alt="Radiación imagen 5" class="imagen-animada">
                 </div>
                 <div class="caja-imagen">
-                    <img src="build/img/lugares_instalacion/universitario.webp" alt="Radiación imagen 6" class="imagen-animada">
+                    <img src="/build/img/lugares_instalacion/universitario.webp" alt="Radiación imagen 6" class="imagen-animada">
                 </div>
             </div>
         </div>

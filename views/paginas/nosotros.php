@@ -82,14 +82,14 @@
 
                     <article class="integrante-card" data-rol="Desarrollo">
                         <div class="integrante-imagen">
-                            <img src="build/img/nosotros/_naason.webp" alt="Foto de Perez Rojas">
+                            <img src="/build/img/nosotros/_naason.webp" alt="Foto de Perez Rojas">
                             <div class="integrante-redes">
-                                <a href="https:www.linkedin.com/in/naason-milcerio-perez-rojas-5361a527b"  target="_blank" aria-label="LinkedIn"><img src="build/img/redes/linkedin.ico" alt="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="https:www.linkedin.com/in/naason-milcerio-perez-rojas-5361a527b"  target="_blank" aria-label="LinkedIn"><img src="/build/img/redes/linkedin.ico" alt="LinkedIn"><i class="fab fa-linkedin"></i></a>
                                 <a href="https://mail.google.com/mail/?view=cm&to=naasonperezrojas@gmail.com.com&su=Asunto%20del%20mensaje&body=Hola,%20me%20gustaría%20contactarte..." 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 aria-label="Email">
-                                <img src="build/img/redes/gmail.ico" alt="Correo"><i class="fas fa-envelope"></i></a>
+                                <img src="/build/img/redes/gmail.ico" alt="Correo"><i class="fas fa-envelope"></i></a>
                             </div>
                         </div>
                         <div class="integrante-info">
@@ -103,14 +103,14 @@
 
                     <article class="integrante-card" data-rol="Finanzas">
                         <div class="integrante-imagen">
-                            <img src="build/img/nosotros/_gabo.webp" alt="Foto de Miguel Bautista">
+                            <img src="/build/img/nosotros/_gabo.webp" alt="Foto de Miguel Bautista">
                             <div class="integrante-redes">
-                                <a href="https://www.linkedin.com/in/gabrielmiguelbautista/"  target="_blank" aria-label="LinkedIn"><img src="build/img/redes/linkedin.ico" alt="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/gabrielmiguelbautista/"  target="_blank" aria-label="LinkedIn"><img src="/build/img/redes/linkedin.ico" alt="LinkedIn"><i class="fab fa-linkedin"></i></a>
                                 <a href="https://mail.google.com/mail/?view=cm&to=gabrielmiguelbautista@gmail.com.com&su=Asunto%20del%20mensaje&body=Hola,%20me%20gustaría%20contactarte..." 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 aria-label="Email">
-                                <img src="build/img/redes/gmail.ico" alt="Correo"><i class="fas fa-envelope"></i></a>
+                                <img src="/build/img/redes/gmail.ico" alt="Correo"><i class="fas fa-envelope"></i></a>
                             </div>
                         </div>
                         <div class="integrante-info">
@@ -126,14 +126,14 @@
                     <!-- Integrante 3 -->
                     <article class="integrante-card" data-rol="Marketing">
                         <div class="integrante-imagen">
-                            <img src="build/img/nosotros/_johan.webp" alt="Foto de Montoya Huayhua">
+                            <img src="/build/img/nosotros/_johan.webp" alt="Foto de Montoya Huayhua">
                             <div class="integrante-redes">
-                                <a href="https://www.linkedin.com/in/johan-montoya-754ab7362/"  target="_blank" aria-label="LinkedIn"><img src="build/img/redes/linkedin.ico" alt="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/johan-montoya-754ab7362/"  target="_blank" aria-label="LinkedIn"><img src="/build/img/redes/linkedin.ico" alt="LinkedIn"><i class="fab fa-linkedin"></i></a>
                                 <a href="https://mail.google.com/mail/?view=cm&to=jmontoya301199@gmail.com.com&su=Asunto%20del%20mensaje&body=Hola,%20me%20gustaría%20contactarte..." 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 aria-label="Email">
-                                <img src="build/img/redes/gmail.ico" alt="Correo"><i class="fas fa-envelope"></i></a>
+                                <img src="/build/img/redes/gmail.ico" alt="Correo"><i class="fas fa-envelope"></i></a>
                             </div>
                         </div>
                         <div class="integrante-info">
@@ -147,14 +147,14 @@
                     <!-- Integrante 4 -->
                     <article class="integrante-card" data-rol="Investigación">
                         <div class="integrante-imagen">
-                            <img src="build/img/nosotros/_oimas.webp" alt="Foto de Oimas Mamani">
+                            <img src="/build/img/nosotros/_oimas.webp" alt="Foto de Oimas Mamani">
                            <div class="integrante-redes">
-                                <a href="https://www.linkedin.com/in/yulinio-oimas-mamani-a7492a21b/"  target="_blank" aria-label="LinkedIn"><img src="build/img/redes/linkedin.ico" alt="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/yulinio-oimas-mamani-a7492a21b/"  target="_blank" aria-label="LinkedIn"><img src="/build/img/redes/linkedin.ico" alt="LinkedIn"><i class="fab fa-linkedin"></i></a>
                                 <a href="https://mail.google.com/mail/?view=cm&to=oimas854@gmail.com.com&su=Asunto%20del%20mensaje&body=Hola,%20me%20gustaría%20contactarte..." 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 aria-label="Email">
-                                <img src="build/img/redes/gmail.ico" alt="Correo"><i class="fas fa-envelope"></i></a>
+                                <img src="/build/img/redes/gmail.ico" alt="Correo"><i class="fas fa-envelope"></i></a>
                             </div>
                         </div>
                         <div class="integrante-info">

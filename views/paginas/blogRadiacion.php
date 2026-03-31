@@ -45,7 +45,7 @@
                                 </div>
                             </div>
                             <div class="imagen-decorativa">
-                                <img src="build/img/imagenes_extras/espectro_uv.webp" alt="Espectro de radiación UV">
+                                <img src="/build/img/imagenes_extras/espectro_uv.webp" alt="Espectro de radiación UV">
                             </div>
                         </div>
                     </div>
@@ -336,7 +336,7 @@
                     <div class="grid-3-columnas">
                         <article class="articulo-card">
                             <div class="articulo-card__imagen">
-                                <img src="build/img/articulos/1.webp" alt="Niños jugando bajo el sol">
+                                <img src="/build/img/articulos/1.webp" alt="Niños jugando bajo el sol">
                             </div>
                             <div class="articulo-card__contenido">
                                 <span class="etiqueta">Salud infantil</span>
@@ -352,7 +352,7 @@
 
                         <article class="articulo-card">
                             <div class="articulo-card__imagen">
-                                <img src="build/img/articulos/2.webp" alt="Gráfico de índice UV">
+                                <img src="/build/img/articulos/2.webp" alt="Gráfico de índice UV">
                             </div>
                             <div class="articulo-card__contenido">
                                 <span class="etiqueta">Análisis de datos</span>
@@ -368,7 +368,7 @@
 
                         <article class="articulo-card">
                             <div class="articulo-card__imagen">
-                                <img src="build/img/articulos/3.webp" alt="Tecnología de protección solar">
+                                <img src="/build/img/articulos/3.webp" alt="Tecnología de protección solar">
                             </div>
                             <div class="articulo-card__contenido">
                                 <span class="etiqueta">Innovación</span>

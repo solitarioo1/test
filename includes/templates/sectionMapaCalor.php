@@ -7,10 +7,10 @@
         <div class="riel-mapas">
             <div class="controles-riel">
                 <button class="control-riel anterior" aria-label="Ver mapa anterior">
-                    <img src="build/img/iconos/izquierda.svg" alt="Anterior">
+                    <img src="/build/img/iconos/izquierda.svg" alt="Anterior">
                 </button>
                 <button class="control-riel siguiente" aria-label="Ver mapa siguiente">
-                    <img src="build/img/iconos/derecha.svg" alt="Siguiente">
+                    <img src="/build/img/iconos/derecha.svg" alt="Siguiente">
                 </button>
             </div>
 

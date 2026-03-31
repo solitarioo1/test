@@ -1,22 +1,22 @@
     <footer class="footer-container">
         <h2><span>Nuestras</span> redes sociales</h1>
         <div class="social-media">
-            <a href="https://www.facebook.com/profile.php?id=61577128277659" target="_blank" rel="noopener noreferrer"><img src="build/img/redes/facebook.ico" alt="Facebook"><span>Facebook</span></a>
-            <a href="https://www.youtube.com/@Intismart" target="_blank" rel="noopener noreferrer"><img src="build/img/redes/youtube.ico" alt="Youtube"><span>Youtube</span></a>
-            <a href="https://www.linkedin.com/company/inti-smart/" target="_blank" rel="noopener noreferrer"><img src="build/img/redes/linkedin.ico" alt="LinkedIn"><span>LinkedIn</span></a>
-            <a href="https://www.instagram.com/inti.smart/" target="_blank" rel="noopener noreferrer"><img src="build/img/redes/instagram.ico" alt="Instagram"><span>Instagram</span></a>
-            <a href="https://www.tiktok.com/@.intismart" target="_blank" rel="noopener noreferrer"><img src="build/img/redes/tiktok.ico" alt="TikTok"><span>TikTok</span></a>
-            <a href="https://wa.me/+51994146924?text=Me%20gustaría%20contactarlos,%20vengo%20desde%20su%20página%20web" target="_blank" rel="noopener noreferrer"><img src="build/img/redes/whatsapp.ico" alt="WhatsApp"><span>WhatsApp</span></a>
-            <a href="https://x.com/Intismart" target="_blank" rel="noopener noreferrer"><img class="twitter" src="build/img/redes/twitter.ico" alt="Twitter"><span>Twitter</span></a>
+            <a href="https://www.facebook.com/profile.php?id=61577128277659" target="_blank" rel="noopener noreferrer"><img src="/build/img/redes/facebook.ico" alt="Facebook"><span>Facebook</span></a>
+            <a href="https://www.youtube.com/@Intismart" target="_blank" rel="noopener noreferrer"><img src="/build/img/redes/youtube.ico" alt="Youtube"><span>Youtube</span></a>
+            <a href="https://www.linkedin.com/company/inti-smart/" target="_blank" rel="noopener noreferrer"><img src="/build/img/redes/linkedin.ico" alt="LinkedIn"><span>LinkedIn</span></a>
+            <a href="https://www.instagram.com/inti.smart/" target="_blank" rel="noopener noreferrer"><img src="/build/img/redes/instagram.ico" alt="Instagram"><span>Instagram</span></a>
+            <a href="https://www.tiktok.com/@.intismart" target="_blank" rel="noopener noreferrer"><img src="/build/img/redes/tiktok.ico" alt="TikTok"><span>TikTok</span></a>
+            <a href="https://wa.me/+51994146924?text=Me%20gustaría%20contactarlos,%20vengo%20desde%20su%20página%20web" target="_blank" rel="noopener noreferrer"><img src="/build/img/redes/whatsapp.ico" alt="WhatsApp"><span>WhatsApp</span></a>
+            <a href="https://x.com/Intismart" target="_blank" rel="noopener noreferrer"><img class="twitter" src="/build/img/redes/twitter.ico" alt="Twitter"><span>Twitter</span></a>
 
-            <a href="#" target="_blank" rel="noopener noreferrer"><img src="build/img/redes/wechat.ico" alt="WeChat"><span>WeChat</span></a>
-            <a href="#" target="_blank" rel="noopener noreferrer"><img src="build/img/redes/threads.ico" alt="Threads"><span>Threads</span></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="/build/img/redes/wechat.ico" alt="WeChat"><span>WeChat</span></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="/build/img/redes/threads.ico" alt="Threads"><span>Threads</span></a>
              
         </div>
         <div class="footer-contenido">
             <div class="company-section">
                 <h3>empresa</h3>
-                <img src="build/img/logo/LOGO-INTI SMART_LOGO HORIZONTAL-POSITIVO.webp" alt="logo-inti" >
+                <img src="/build/img/logo/LOGO-INTI SMART_LOGO HORIZONTAL-POSITIVO.webp" alt="logo-inti" >
                 <div class="company-history">
                     <p>
                         Inti Smart S.A.C fue fundada por estudiantes de gestión de riesgos con el objetivo de transformar el sector mediante tecnología e innovación. La empresa desarrolla soluciones eficientes y sostenibles para gestionar fenómenos naturales y proteger vidas y bienes, comprometida con un futuro más seguro e inteligente.
