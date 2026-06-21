@@ -12,3 +12,4 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="/build/css/app.min.css">
 </head>
+<body>

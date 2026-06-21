@@ -1,5 +1,5 @@
     <footer class="footer-container">
-        <h2><span>Nuestras</span> redes sociales</h1>
+        <h2><span>Nuestras</span> redes sociales</h2>
         <div class="social-media">
             <a href="https://www.facebook.com/profile.php?id=61577128277659" target="_blank" rel="noopener noreferrer"><img src="/build/img/redes/facebook.ico" alt="Facebook"><span>Facebook</span></a>
             <a href="https://www.youtube.com/@Intismart" target="_blank" rel="noopener noreferrer"><img src="/build/img/redes/youtube.ico" alt="Youtube"><span>Youtube</span></a>

@@ -13,10 +13,7 @@ node_modules/
 # Git
 .git/
 
-# Assets compilados (se generan en el build)
-public/build/css/
-public/build/js/
-public/build/img/
+# Assets compilados (incluidos en el repo, no regenerar en Docker)
 
 # Base de datos
 *.sql
