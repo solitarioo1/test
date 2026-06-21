@@ -78,7 +78,7 @@ class Router {
             session_start();
         }
 
-        $urlActual = $_SERVER['PATH_INFO'] ?? '/';
+        $urlActual = $_SERVER['PATH_INFO'] ?? parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?? '/';
         $metodo = $_SERVER['REQUEST_METHOD'];
         $urlActual = rtrim($urlActual, '/') ?: '/';
 
