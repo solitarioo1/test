@@ -1,5 +1,4 @@
 
-<body>
     <header class="privacy-header">
         <div class="privacy-container">
             <div class="privacy-header__content">
@@ -28,7 +27,7 @@
         <div class="privacy-section">
             <div class="privacy-section__header">
                 <p class="privacy-last-updated">Fecha de última actualización: 25 de abril de 2025</p>
-                <a href="/contacto" class="privacy-btn privacy-btn--back"><i class="fas fa-arrow-left"></i> Volver a la página principal</a>
+                <a href="/" class="privacy-btn privacy-btn--back"><i class="fas fa-arrow-left"></i> Volver a la página principal</a>
             </div>
             
             <div class="privacy-card">
@@ -244,11 +243,9 @@
                     </div>
                     <div class="privacy-section__header">
                         <p class="privacy-last-updated">Fecha de última actualización: 25 de abril de 2025</p>
-                        <a href="/contacto" class="privacy-btn privacy-btn--back"><i class="fas fa-arrow-left"></i> Volver a la página principal</a>
+                        <a href="/" class="privacy-btn privacy-btn--back"><i class="fas fa-arrow-left"></i> Volver a la página principal</a>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-
-</body>

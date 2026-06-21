@@ -8,13 +8,12 @@
     max-width: 120rem;
     margin: 0 auto;
     padding: 0 1.5rem;
-    background-color:v.$neutro-400;
-    
+
     @include m.tablet {
         width: 95%;
         padding: 0 2rem;
     }
-    
+
     @include m.desktop {
         width: 90%;
         max-width: 110rem;
@@ -23,7 +22,7 @@
 
 
 .privacy-header {
-    background-color: v.$neutro-300;
+    background-color: v.$azul-700;
     padding: 1.5rem 0;
     box-shadow: v.$shadow-sm;
     position: sticky;
@@ -70,28 +69,29 @@
             font-size: 1.5rem;
         }
         
+        color: v.$neutro-300;
+
         &:hover {
-            color: v.$verde-500;
+            color: v.$turquesa-300;
         }
     }
 }
 .privacy-hero {
-    background-color:v.$neutro-400;
-    padding: 2rem 0;
+    background: linear-gradient(135deg, v.$azul-700 0%, v.$azul-500 50%, v.$verde-600 100%);
+    padding: 4rem 0;
     text-align: center;
     margin-bottom: 3rem;
-    
+
     @include m.tablet {
-        padding: 3rem 0;
+        padding: 5rem 0;
         margin-bottom: 4rem;
     }
-    
+
     @include m.desktop {
-        padding: 4rem 0;
+        padding: 6rem 0;
     }
-    
+
     &__content {
-        background-color: v.$neutro-400;
         max-width: 80rem;
         margin: 0 auto;
     }
@@ -99,7 +99,7 @@
     &__subtitle {
         font-family: v.$fuente_terciaria;
         font-size: 1.8rem;
-        color: v.$neutro-600;
+        color: v.$neutro-200;
         margin-top: 1.5rem;
         
         @include m.tablet {
@@ -110,7 +110,7 @@
 
 .privacy-title {
     font-size: 2.8rem;
-    color: v.$azul-700;
+    color: v.$neutro-100;
     margin-bottom: 1.5rem;
     line-height: 1.2;
     
@@ -170,14 +170,16 @@
 }
 
 .privacy-card {
-    background-color: v.$neutro-400;
+    background-color: v.$neutro-100;
+    border-radius: v.$radius-md;
+    box-shadow: v.$shadow-md;
     overflow: hidden;
-    
+
     &__content {
-        padding: 0.5rem;
-        
+        padding: 3rem 2rem;
+
         @include m.tablet {
-            padding: 0.5rem;
+            padding: 4rem 3rem;
         }
     }
 }
@@ -288,8 +290,8 @@
 }
 
 .privacy-highlight-box {
-    background-color: v.$azulClaro1;
-    border-left: 0.4rem solid v.$neutro-700;
+    background-color: v.$azul-100;
+    border-left: 0.4rem solid v.$azul-500;
     padding: 2rem;
     margin: 2rem 0;
     border-radius: 0 v.$radius-sm v.$radius-sm 0;
